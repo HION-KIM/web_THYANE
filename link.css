@@ -23,6 +23,8 @@ body img{
     height: 82px;
 }
 
-.topbar__inner-1__lang-box{
-
+.container>sec1{
+    background-image: url("img/imageye___-_th_01.jpg");
+    height: 100vh;
+    width:100%;
 }
