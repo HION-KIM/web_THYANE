@@ -1,30 +1,65 @@
-body, ul, li{
-    margin:0;
-    padding:0;
+/* 폰트 */
+@font-face {
+    font-family: 'CrimsonText';
+    src: url(font/CrimsonText/CrimsonText-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+/* 노멀라이즈 */
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
-a{
-    color:inherit;
+a {
+    color: inherit;
     text-decoration: none;
 }
 
-body img{
-    display:block;
+body img {
+    display: block;
 }
 
-.con{
-    max-width: 1880px;
+/* 라이브러리 */
+.border-R{
+    border:3px solid red;
 }
-.topbar__inner-1{
+.outline-R{
+    outline:3px solid red;
+}
+
+.flex{
     display:flex;
-    color:#fff;
-    width: 100%;
-    height: 82px;
+}
+.grow{
+    flex-grow: 1;
 }
 
-.container>sec1{
-    background-image: url("img/imageye___-_th_01.jpg");
-    height: 100vh;
-    width:100%;
+.box-center{
+    justify-content: center;
+    align-items: center;
 }
+
+/* 공통 커스텀 */
+
+body {
+    background-color: gray;
+}
+
+.con-min-width {
+    min-width: 1880px;
+}
+
+.con {
+    width: 1880px;
+}
+
+.container>sec1 {
+    background-image: url("img/imageye___-_1527038517102i0.png");
+    height: 100vh;
+    width: 100%;
+}
+
