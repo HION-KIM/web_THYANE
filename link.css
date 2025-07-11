@@ -43,18 +43,20 @@ body img {
     align-items: center;
 }
 
+.center{
+    margin:0 auto 0 auto;
+}
+.h-100{
+    height:100%;
+}
 /* 공통 커스텀 */
 
 body {
     background-color: gray;
 }
 
-.con-min-width {
-    min-width: 1880px;
-}
-
-.con {
-    width: 1880px;
+.con-max-width {
+    max-width: 1880px;
 }
 
 .container>sec1 {

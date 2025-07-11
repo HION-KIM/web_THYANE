@@ -10,13 +10,14 @@
 </head>
 
 <body>
-  <div class="con-min-width">
-    <header class="con topbar border-R">
-      <div class="topbar__inner-1">
-        <div class="topbar__inner-1__lang-box flex box-center">
-          <a href="#">kor</a>
+  <div><a href="https://www.thy-ane.com/shop/main/index.php" target="_blank">모작 링크 띠아느</a></div>
+  <div class="con-max-width">
+    <header class="topbar center con-max-width">
+      <div class="topbar__inner-1 flex">
+        <div class="topbar__inner-1__lang-box flex">
+          <a href="#">kr</a>
         </div>
-        <div class="topbar__inner-1__menu-box-1">
+        <div class="menu-box topbar__inner-1__menu-box-1 ">
           <ul>
             <li>
               <a href="#"><span>Notice</span></a>
@@ -32,7 +33,7 @@
         <div class="topbar__inner-1__logo-box flex grow box-center">
           <img src="../img/imageye___-_logo-w.png" alt="" />
         </div>
-        <div class="topbar__inner-1__menu-box-2">
+        <div class="menu-box topbar__inner-1__menu-box-2">
           <ul>
             <li>
               <a href="#"><span>Login</span></a>
@@ -49,10 +50,14 @@
           </ul>
         </div>
       </div>
-      <div class="topbar__inner-2">
-        <div class="topbar__inner-2__hamberger"></div>
-        <div class="topbar__inner-2__menu-box1">
-          <ul>
+      <div class="topbar__inner-2 flex">
+        <div class="topbar__inner-2__hamberger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu-box topbar__inner-2__menu-box1 grow h-100">
+          <ul class="flex box-center">
             <li>
               <a href="#"><span>Home</span></a>
             </li>
@@ -74,37 +79,131 @@
           </ul>
         </div>
         <div class="topbar__inner-2__search-box">
-          <img src="../img/imageye___-_sear-icon-b.png" alt="" />
+          <img src="../img/sear-icon.png" alt="" />
         </div>
       </div>
 
       <style>
         /* ------- topbar start ------- */
-        .topbar{
-          height:82px;
+        .topbar {
+          height: 82px;
           font-family: 'CrimsonText';
-          font-weight: 600;
+          /* font-weight: 600; */
+          color: #fff;
         }
+
+        /* ------- topbar inner-1 start ------- */
         .topbar__inner-1 {
           display: flex;
           width: 100%;
           height: 82px;
+          padding: 0 30px;
+          font-size: 15px;
+          border-bottom: 1px solid rgb(102, 102, 102);
         }
-        .topbar__inner-1__lang-box{
+
+        /* ------- topbar__inner-1__lang-box start -------*/
+        .topbar__inner-1__lang-box {
+          align-items: center;
           width:90px;
         }
 
+        /* ------- topbar__inner-1__lang-box end -------*/
+        /* ------- menu setting start-------  */
+        /* ------- menu local setting start-------  */
+        .topbar .menu-box ul {
+          height: 100%;
+        }
+
+        .topbar .menu-box ul li {
+          display: inline-block;
+          height: 100%;
+        }
+
+        .topbar .menu-box ul>li>a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+
+        /* ------- menu local setting end-------  */
+
+        .topbar__inner-1__menu-box-1>ul {
+          padding: 0 50px;
+          border-left: 1px solid rgb(102, 102, 102);
+          border-right: 1px solid rgb(102, 102, 102);
+        }
+
+        .topbar__inner-1__menu-box-1>ul>li {
+          margin-right: 50px;
+        }
+
+        .topbar__inner-1__menu-box-1>ul>li:last-child {
+          margin-right: 0;
+        }
+
+        .topbar__inner-1__menu-box-2>ul {
+          padding-left: 50px;
+          border-left: 1px solid rgb(102, 102, 102);
+        }
+
+        .topbar__inner-1__menu-box-2>ul>li {
+          margin-right: 75px;
+        }
+
+        .topbar__inner-1__menu-box-2>ul>li:last-child {
+          margin: 0;
+        }
+
+        /* ------- menu setting end -------  */
+
+        .topbar__inner-1__lang-box {
+          width: 90px;
+        }
+
         /* ------- logo box ------- */
-        .topbar__inner-1__logo-box{
-          height:100%;
+        .topbar__inner-1__logo-box {
+          height: 100%;
         }
-        .topbar__inner-1__logo-box>img{
-          width:176px;
+
+        .topbar__inner-1__logo-box>img {
+          width: 176px;
         }
+
+        /* ------- topbar inner-1 end ------- */
+        /* ------- topbar inner-2 start ------- */
+        .topbar__inner-2 {
+          width: 100%;
+          padding: 0 30px;
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          height: 78px;
+        }
+
+        /* ------- topbar__inner-2__hamberger start ------- */
+        .topbar__inner-2__hamberger>div {
+          width: 30px;
+          height: 2px;
+          background-color: #fff;
+          margin: 7px 0;
+        }
+
+        /* ------- topbar__inner-2__hamberger end ------- */
+        /* menu-box topbar__inner-2__menu-box1 start */
+        .topbar__inner-2__menu-box1>ul>li {
+          margin-right: 80px;
+        }
+
+        .topbar__inner-2__menu-box1>ul>li:last-child {
+          margin-right: 0;
+        }
+
+        /* menu-box topbar__inner-2__menu-box1 end */
+        /* ------- topbar inner-2 end ------- */
 
 
         /* ------- topbar end ------- */
-
       </style>
     </header>
 
