@@ -34,6 +34,9 @@ body img {
 .flex{
     display:flex;
 }
+.block{
+    display:block
+}
 .grow{
     flex-grow: 1;
 }
@@ -49,6 +52,18 @@ body img {
 .h-100{
     height:100%;
 }
+.w-100{
+    width:100%;
+}
+.fixed{
+    position:fixed;
+}
+.absolute{
+    position:absolute;
+}
+.relative{
+    position:relative;
+}
 /* 공통 커스텀 */
 
 body {
@@ -58,6 +73,7 @@ body {
 .con-max-width {
     max-width: 1880px;
 }
+
 
 .container>sec1 {
     background-image: url("img/imageye___-_1527038517102i0.png");
