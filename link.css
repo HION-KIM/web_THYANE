@@ -68,12 +68,16 @@ body img {
 
 body {
     background-color: gray;
+    font-family: 'CrimsonText';
 }
 
 .con-max-width {
     max-width: 1880px;
 }
 
+.con{
+    width:1600px;
+}
 
 .container>sec1 {
     background-image: url("img/imageye___-_1527038517102i0.png");
