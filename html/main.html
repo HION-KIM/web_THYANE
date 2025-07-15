@@ -10,26 +10,103 @@
 </head>
 
 <body>
-  <main class="con center">
-    <section class="sec-title">
+  <main class="con center border-R">
+    <section class="sec-title border-R">
       <img src="../img/imageye___-_plin-ic.png" alt="">
       <br>
       <span>Product</span>
     </section>
+    <section class="sec-product1 relative">
+      <div class="bg-b absolute"></div>
+      <div class="img-box">
+        <a href="#">
+          <img src="../img/imageye___-_1527038517102i0.png" alt="">
+        </a>
+      </div>
+      <div class="text-boxs">
+        <div class="text-box1">
+          <span>
+            Time-crystallized
+          </span>
+          <h3>Refresh turn over toner</h3>
+          <span>타임 크리스탈라이즈드</span>
+        </div>
+        <div class="text-box2">
+          <p>
+            민감한 피부의 각질제거와 피부결 정돈에 효과적이고
+            <br>
+            피부에 보습을 주며 편백나무 잎 추출물과 갈락토미세스
+            <br>
+            발효 여과물이 함유된 토너입니다.
+          </p>
+        </div>
+        <div class="text-box3">
+          <span>￦ 32,000</span>
+        </div>
+        <div class="Btn-box4">
+          <div></div>
+          <div><span>Buy Now</span></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <style>
+    /* ------- main start ------- */
+    /* ------- sec-title start ------- */
     .sec-title {
       text-align: center;
       color: rgb(13, 49, 83);
       font-size: 14px;
-      letter-spacing:0.5px;
-      line-height:22.4px;
+      letter-spacing: 0.5px;
+      line-height: 22.4px;
     }
 
     .sec-title img {
       display: inline-block;
     }
+
+    /* ------- sec-title end ------- */
+    /* ------- sec-product1 start ------- */
+    .sec-product1 .bg-b {
+      width: 674px;
+      height: 600px;
+      top: -100px;
+      left: 150px;
+      z-index: -100;
+    }
+
+    .sec-product1 .bg-b::after {
+      content: "";
+      position:absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform:translateX(-50%);
+      background: #ded6c3;
+      transition: all .3s 50ms ease-in-out;
+    }
+
+    .sec-product1:hover .bg-b::after {
+      width: 100%;
+    }
+
+    .sec-product1 .img-box img{
+      width:558px;
+    }
+
+    .sec-product1 .img-box {}
+
+    /* ------- sec-product1 end ------- */
+
+    /* ------- sec-product2 start ------- */
+    /* ------- sec-product2 end ------- */
+
+    /* ------- sec-product3 start ------- */
+    /* ------- sec-product3 end ------- */
+
+    /* ------- main end ------- */
   </style>
 </body>
 
