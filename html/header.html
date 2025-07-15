@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <div><a href="https://www.thy-ane.com/shop/main/index.php" target="_blank">모작 링크 띠아느</a></div>
   <div class="con">
     <header class="topbar fixed w-100 blockborder-R">
       <div class="topbar__inner-1 con-max-width center flex">
@@ -127,6 +126,7 @@
 
       /* ------- topbar inner-1 start ------- */
       .topbar__inner-1 {
+        box-sizing: border-box;
         display: flex;
         padding: 0 30px;
         height: 82px;
@@ -167,7 +167,7 @@
       }
 
       .topbar__inner-1__menu-box-1>ul>li {
-        margin-right: 50px;
+        margin-right: 75px;
       }
 
       .topbar__inner-1__menu-box-1>ul>li:last-child {
@@ -199,13 +199,14 @@
       }
 
       .topbar__inner-1__logo-box>img {
-        width: 176px;
+        width: 138px;
       }
 
       /* ------- topbar inner-1 end ------- */
       /* ------- topbar inner-2 start ------- */
       .topbar__inner-2 {
         padding: 0 30px;
+        box-sizing: border-box;
         display: flex;
         align-items: center;
         font-size: 18px;
@@ -213,6 +214,9 @@
       }
 
       /* ------- topbar__inner-2__hamberger start ------- */
+      .topbar__inner-2__hamberger{
+        cursor:pointer;
+      }
       .topbar__inner-2__hamberger>div {
         width: 30px;
         height: 2px;
@@ -248,9 +252,9 @@
         letter-spacing:0.5px;
         line-height: 22.4px;
         visibility:hidden;
-        max-height:0;
+        /* max-height:0; */
         opacity: 0;
-        transition:all .5s ease;
+        transition:all .5s ,ease;
         overflow: hidden;
         box-shadow: inset 0 0 0 1px #bfbfbf;
       }
@@ -262,7 +266,9 @@
       /* ------- menu-box topbar__inner-2__menu-box1 2차 메뉴 end ------- */
 
       /* menu-box topbar__inner-2__menu-box1 end */
+      /* ------- topbar__inner-2__search-box start------- */
 
+      /* ------- topbar__inner-2__search-box end------- */
       /* ------- topbar inner-2 end ------- */
 
       /* ------- topbar end ------- */

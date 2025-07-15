@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>banner</title>
+  <link rel="stylesheet" href="../link.css">
+</head>
+
+<body>
+  <section class="main__banner">
+    <div class="swiper-bar">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="swiper-btn">
+      <div class="imgbox prev"></div>
+      <div class="imgbox next"></div>
+    </div>
+  </section>
+
+  <style>
+    .main__banner {
+      background-image: url(../img/imageye___-_th_01.jpg);
+      background-size: cover;
+      height: 106vh;
+      position: relative;
+    }
+
+    .swiper-bar {
+      position: absolute;
+      left: 0;
+      bottom: 94px;
+      height: 2px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .swiper-bar>div {
+      display: inline-block;
+      height: 100%;
+      width: 79px;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+
+    .swiper-bar>div:first-child {
+      background-color: #fff;
+    }
+
+    .swiper-btn {
+      width: 198px;
+      height: 14px;
+      position: absolute;
+      right: 80px;
+      bottom: 80px;
+      background: url(../img/slide-bt03.png) no-repeat center center;
+    }
+
+    .swiper-btn>.imgbox {
+      width: 78px;
+      height: 14px;
+      position: absolute;
+    }
+    .swiper-btn>.prev{
+      background-image: url(../img/slide-bt01.png);
+      left:0;
+      top:0;
+    }
+    .swiper-btn>.next{
+      background-image: url(../img/slide-bt02.png);
+      right:0;
+      top:0;
+    }
+  </style>
+</body>
+
+</html>
