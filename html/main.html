@@ -10,56 +10,67 @@
 </head>
 
 <body>
-  <main class="con center border-R">
-    <section class="sec-title border-R">
-      <img src="../img/imageye___-_plin-ic.png" alt="">
-      <br>
-      <span>Product</span>
-    </section>
-    <section class="sec-product1 relative">
-      <div class="bg-b absolute"></div>
-      <div class="img-box">
-        <a href="#">
-          <img src="../img/imageye___-_1527038517102i0.png" alt="">
-        </a>
+  <main>
+    <div class="con">
+      <div class="content center border-R">
+        <section class="sec-title">
+          <img src="../img/imageye___-_plin-ic.png" alt="">
+          <br>
+          <span>Product</span>
+        </section>
+        <section class="sec-product sec-product1 relative flex border-R">
+          <div class="bg-b"></div>
+          <div class="img-box">
+            <a href="#">
+              <img src="../img/imageye___-_1527038517102i0.png" alt="">
+            </a>
+          </div>
+          <div class="text-boxs">
+            <div class="text-box1">
+              <span>
+                Time-crystallized
+              </span>
+              <h3>Refresh turn over toner</h3>
+              <span>타임 크리스탈라이즈드 리플레시 턴 오버 토너</span>
+            </div>
+            <div class="text-box2">
+              <a>
+                민감한 피부의 각질제거와 피부결 정돈에 효과적이고
+                <br>
+                피부에 보습을 주며 편백나무 잎 추출물과 갈락토미세스
+                <br>
+                발효 여과물이 함유된 토너입니다.
+              </a>
+            </div>
+            <div class="text-box3">
+              <span>￦ 32,000</span>
+            </div>
+            <div class="Btn-box">
+              <div><img src="../img/imageye___-_bag-icon.png" alt=""></div>
+              <div><img src="../img/imageye___-_card-icon.png" alt=""><span>Buy Now</span></div>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="text-boxs">
-        <div class="text-box1">
-          <span>
-            Time-crystallized
-          </span>
-          <h3>Refresh turn over toner</h3>
-          <span>타임 크리스탈라이즈드</span>
-        </div>
-        <div class="text-box2">
-          <p>
-            민감한 피부의 각질제거와 피부결 정돈에 효과적이고
-            <br>
-            피부에 보습을 주며 편백나무 잎 추출물과 갈락토미세스
-            <br>
-            발효 여과물이 함유된 토너입니다.
-          </p>
-        </div>
-        <div class="text-box3">
-          <span>￦ 32,000</span>
-        </div>
-        <div class="Btn-box4">
-          <div></div>
-          <div><span>Buy Now</span></div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <style>
     /* ------- main start ------- */
+    .con {
+      background-color: rgb(236, 230, 217);
+    }
+
     /* ------- sec-title start ------- */
     .sec-title {
       text-align: center;
       color: rgb(13, 49, 83);
-      font-size: 14px;
+      font-size: 22px;
       letter-spacing: 0.5px;
-      line-height: 22.4px;
+      line-height: 26.4px;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 20;
     }
 
     .sec-title img {
@@ -68,27 +79,35 @@
 
     /* ------- sec-title end ------- */
     /* ------- sec-product1 start ------- */
-    .sec-product1{
-      box-sizing: border-box;
-      margin: 0 150px;
-      padding : 0 30px;
+    .sec-product {
+      margin: 80px 150px;
+      padding: 0 30px;
+      position: relative;
+      z-index: 10;
     }
+
     .sec-product1 .bg-b {
+      position: absolute;
       width: 674px;
       height: 600px;
       top: -100px;
-      left: 150px;
-      z-index: -100;
+      left: 5px;
+      z-index: -2;
+      visibility: hidden;
+    }
+
+    .sec-product1:hover .bg-b {
+      visibility: visible;
     }
 
     .sec-product1 .bg-b::after {
       content: "";
-      position:absolute;
+      position: absolute;
       width: 0;
       height: 100%;
       top: 0;
       left: 50%;
-      transform:translateX(-50%);
+      transform: translateX(-50%);
       background: #ded6c3;
       transition: all .3s 50ms ease-in-out;
     }
@@ -97,11 +116,108 @@
       width: 100%;
     }
 
-    .sec-product1 .img-box img{
-      width:558px;
+    .sec-product1 .img-box {
+      width: 50%;
     }
 
-    .sec-product1 .img-box {}
+    .sec-product1 .img-box img {
+      width: 558px;
+      margin: 0 auto;
+    }
+
+    .sec-product1 .text-boxs {
+      margin-top: 80px;
+    }
+
+    .sec-product1 .text-box1>span:nth-child(1) {
+      font-size: 22px;
+      cursor: pointer;
+      display: block;
+      line-height: 26.4px;
+      color: rgb(140, 140, 140);
+      margin-bottom: 3px;
+
+    }
+
+    .sec-product1 .text-box1>h3 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 45.6px;
+      margin-bottom: 10px;
+      color: rgb(0, 36, 83);
+
+    }
+
+    .sec-product1 .text-box1>span:nth-child(3) {
+      color: rgb(0, 36, 83);
+      cursor: pointer;
+      display: block;
+      font-size: 22px;
+      letter-spacing: -2px;
+      line-height: 26.4px;
+      margin-bottom: 10px;
+
+    }
+
+    .sec-product1 .text-box2>a {
+      color: rgb(131, 131, 131);
+      display: block;
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      line-height: 22.4px;
+
+    }
+
+    .sec-product1 .text-box3 {
+      color: #002453;
+      font-size: 28px;
+      display: inline-block;
+      letter-spacing: 0;
+      font-weight: 900;
+      line-height: 44.8px;
+      text-align: left;
+    }
+
+    .sec-product1 .Btn-box {
+      margin-top: 50px;
+      text-align: left;
+      display:flex;
+    }
+
+    .sec-product1 .Btn-box img {
+      display: inline-block;
+    }
+
+    .sec-product1 .Btn-box div:nth-child(1) {
+      border: 1px solid #a1a1a1;
+      width: 79px;
+      height: 72px;
+      text-align: center;
+      padding: 13px 0;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+
+    .sec-product1 .Btn-box div:nth-child(2) {
+      background: #002453;
+      border: 1px solid #002453;
+      font-size: 18px;
+      color: #fff;
+      width: 193px;
+      height: 72px;
+      padding: 30px 20px 3px 20px;
+      margin-left: 10px;
+      display: inline-block;
+      box-sizing: border-box;
+      font-weight: 700;
+      text-align: left;
+    }
+    .sec-product1 .Btn-box div:nth-child(2)>span{
+      margin-left:20px;
+    }
+
+
 
     /* ------- sec-product1 end ------- */
 
