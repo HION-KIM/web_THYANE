@@ -12,13 +12,13 @@
 <body>
   <main>
     <div class="con">
-      <div class="content center border-R">
-        <section class="sec-title">
+      <section class="content content-1-products center">
+        <div class="sec-title">
           <img src="../img/imageye___-_plin-ic.png" alt="">
           <br>
           <span>Product</span>
-        </section>
-        <section class="sec-product sec-product1 relative flex border-R">
+        </div>
+        <div class="sec-product sec-product1 relative flex">
           <div class="bg-b"></div>
           <div class="img-box">
             <a href="#">
@@ -50,8 +50,82 @@
               <div><img src="../img/imageye___-_card-icon.png" alt=""><span>Buy Now</span></div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+        <div class="sec-product sec-product2 relative flex">
+          <div class="bg-b"></div>
+          <div class="text-boxs">
+            <div class="text-box1">
+              <span>
+                Time-crystallized
+              </span>
+              <h3>Essence</h3>
+              <span>타임 크리스탈라이즈드 에센스</span>
+            </div>
+            <div class="text-box2">
+              <a>
+                지쳐있는 피부에 산뜻한 느낌을 주고 촉촉한 수분감 제공과
+                <br>
+                피부의 탄력 증강을 도와주며 6가지의 크고 작은 히알루론산이
+                <br>
+                함유된 에센스입니다.
+              </a>
+            </div>
+            <div class="text-box3">
+              <span>￦ 40,000</span>
+            </div>
+            <div class="Btn-box">
+              <div><img src="../img/imageye___-_bag-icon.png" alt=""></div>
+              <div><img src="../img/imageye___-_card-icon.png" alt=""><span>Buy Now</span></div>
+            </div>
+          </div>
+          <div class="img-box">
+            <a href="#">
+              <img src="../img/imageye___-_1527038603320i0.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="sec-product sec-product3 relative flex">
+          <div class="bg-b"></div>
+          <div class="img-box">
+            <a href="#">
+              <img src="../img/imageye___-_1527038620290i0.png" alt="">
+            </a>
+          </div>
+          <div class="text-boxs">
+            <div class="text-box1">
+              <span>
+                Time-crystallized
+              </span>
+              <h3>Daily defence sun lotion</h3>
+              <span>타임 크리스탈라이즈드 데일리 디펜스 선로션</span>
+            </div>
+            <div class="text-box2">
+              <a>
+                차단제의 적절한 배합을 통한 자외선 차단 효과와 식물성 복합물질인
+                <br>
+                BSASM의 함유로 자외선으로부터 자극받은 피부를 진정시켜주며
+                <br>
+                톤업 효과를 주는 데일리 선로션입니다.
+              </a>
+            </div>
+            <div class="text-box3">
+              <span>￦ 29,000</span>
+            </div>
+            <div class="Btn-box">
+              <div><img src="../img/imageye___-_bag-icon.png" alt=""></div>
+              <div><img src="../img/imageye___-_card-icon.png" alt=""><span>Sold Out</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box center">
+          <a href="#">
+            All Products
+          </a>
+        </div>
+      </section>
+      <section class="content content-2 center border-R">
+        
+      </section>
     </div>
   </main>
 
@@ -61,6 +135,10 @@
       background-color: rgb(236, 230, 217);
     }
 
+    /* ------- content-1-products start------- */
+    .content-1-products{
+      width: 1600px;
+    }
     /* ------- sec-title start ------- */
     .sec-title {
       text-align: center;
@@ -84,6 +162,7 @@
       padding: 0 30px;
       position: relative;
       z-index: 10;
+      /* border: 1px solid red; */
     }
 
     .sec-product1 .bg-b {
@@ -177,12 +256,13 @@
       font-weight: 900;
       line-height: 44.8px;
       text-align: left;
+      margin-top: 15px;
     }
 
     .sec-product1 .Btn-box {
       margin-top: 50px;
       text-align: left;
-      display:flex;
+      display: flex;
     }
 
     .sec-product1 .Btn-box img {
@@ -213,8 +293,9 @@
       font-weight: 700;
       text-align: left;
     }
-    .sec-product1 .Btn-box div:nth-child(2)>span{
-      margin-left:20px;
+
+    .sec-product1 .Btn-box div:nth-child(2)>span {
+      margin-left: 20px;
     }
 
 
@@ -222,11 +303,307 @@
     /* ------- sec-product1 end ------- */
 
     /* ------- sec-product2 start ------- */
+    .sec-product2 .bg-b {
+      position: absolute;
+      width: 903px;
+      height: 423px;
+      top: 84px;
+      right: -100px;
+      z-index: -2;
+      visibility: hidden;
+    }
+
+    .sec-product2:hover .bg-b {
+      visibility: visible;
+    }
+
+    .sec-product2 .bg-b::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ded6c3;
+      transition: all .3s 50ms ease-in-out;
+    }
+
+    .sec-product2:hover .bg-b::after {
+      width: 100%;
+    }
+
+    .sec-product2 .img-box {
+      width: 50%;
+    }
+
+    .sec-product2 .img-box img {
+      width: 558px;
+      margin: 0 auto;
+    }
+
+    .sec-product2 .text-boxs {
+      margin-top: 80px;
+      width: 50%;
+    }
+
+    .sec-product2 .text-box1>span:nth-child(1) {
+      font-size: 22px;
+      cursor: pointer;
+      display: block;
+      line-height: 26.4px;
+      color: rgb(140, 140, 140);
+      margin-bottom: 3px;
+
+    }
+
+    .sec-product2 .text-box1>h3 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 45.6px;
+      margin-bottom: 10px;
+      color: rgb(0, 36, 83);
+
+    }
+
+    .sec-product2 .text-box1>span:nth-child(3) {
+      color: rgb(0, 36, 83);
+      cursor: pointer;
+      display: block;
+      font-size: 22px;
+      letter-spacing: -2px;
+      line-height: 26.4px;
+      margin-bottom: 10px;
+
+    }
+
+    .sec-product2 .text-box2>a {
+      color: rgb(131, 131, 131);
+      display: block;
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      line-height: 22.4px;
+
+    }
+
+    .sec-product2 .text-box3 {
+      color: #002453;
+      font-size: 28px;
+      display: inline-block;
+      letter-spacing: 0;
+      font-weight: 900;
+      line-height: 44.8px;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .sec-product2 .Btn-box {
+      margin-top: 50px;
+      text-align: left;
+      display: flex;
+    }
+
+    .sec-product2 .Btn-box img {
+      display: inline-block;
+    }
+
+    .sec-product2 .Btn-box div:nth-child(1) {
+      border: 1px solid #a1a1a1;
+      width: 79px;
+      height: 72px;
+      text-align: center;
+      padding: 13px 0;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+
+    .sec-product2 .Btn-box div:nth-child(2) {
+      background: #002453;
+      border: 1px solid #002453;
+      font-size: 18px;
+      color: #fff;
+      width: 193px;
+      height: 72px;
+      padding: 30px 20px 3px 20px;
+      margin-left: 10px;
+      display: inline-block;
+      box-sizing: border-box;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .sec-product2 .Btn-box div:nth-child(2)>span {
+      margin-left: 20px;
+    }
+
     /* ------- sec-product2 end ------- */
 
     /* ------- sec-product3 start ------- */
-    /* ------- sec-product3 end ------- */
+    .sec-product3 .bg-b {
+      position: absolute;
+      width: 573px;
+      height: 600px;
+      top: -100px;
+      left: 90px;
+      z-index: -2;
+      visibility: hidden;
+    }
 
+    .sec-product3:hover .bg-b {
+      visibility: visible;
+    }
+
+    .sec-product3 .bg-b::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ded6c3;
+      transition: all .3s 50ms ease-in-out;
+    }
+
+    .sec-product3:hover .bg-b::after {
+      width: 100%;
+    }
+
+    .sec-product3 .img-box {
+      width: 50%;
+    }
+
+    .sec-product3 .img-box img {
+      width: 558px;
+      margin: 0 auto;
+    }
+
+    .sec-product3 .text-boxs {
+      margin-top: 80px;
+      width: 50%;
+    }
+
+    .sec-product3 .text-box1>span:nth-child(1) {
+      font-size: 22px;
+      cursor: pointer;
+      display: block;
+      line-height: 26.4px;
+      color: rgb(140, 140, 140);
+      margin-bottom: 3px;
+
+    }
+
+    .sec-product3 .text-box1>h3 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 45.6px;
+      margin-bottom: 10px;
+      color: rgb(0, 36, 83);
+
+    }
+
+    .sec-product3 .text-box1>span:nth-child(3) {
+      color: rgb(0, 36, 83);
+      cursor: pointer;
+      display: block;
+      font-size: 22px;
+      letter-spacing: -2px;
+      line-height: 26.4px;
+      margin-bottom: 10px;
+
+    }
+
+    .sec-product3 .text-box2>a {
+      color: rgb(131, 131, 131);
+      display: block;
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      line-height: 22.4px;
+
+    }
+
+    .sec-product3 .text-box3 {
+      color: #002453;
+      font-size: 28px;
+      display: inline-block;
+      letter-spacing: 0;
+      font-weight: 900;
+      line-height: 44.8px;
+      text-align: left;
+      margin-top: 15px;
+    }
+
+    .sec-product3 .Btn-box {
+      margin-top: 50px;
+      text-align: left;
+      display: flex;
+    }
+
+    .sec-product3 .Btn-box img {
+      display: inline-block;
+    }
+
+    .sec-product3 .Btn-box div:nth-child(1) {
+      border: 1px solid #a1a1a1;
+      width: 79px;
+      height: 72px;
+      text-align: center;
+      padding: 13px 0;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+
+    .sec-product3 .Btn-box div:nth-child(2) {
+      background: #002453;
+      border: 1px solid #002453;
+      font-size: 18px;
+      color: #fff;
+      width: 193px;
+      height: 72px;
+      padding: 30px 20px 3px 20px;
+      margin-left: 10px;
+      display: inline-block;
+      box-sizing: border-box;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .sec-product3 .Btn-box div:nth-child(2)>span {
+      margin-left: 20px;
+    }
+
+    /* ------- sec-product3 end ------- */
+    .content-1-products .btn-box{
+      max-width:1240px;
+    }
+    .content-1-products .btn-box a{
+      color:#0d3153;
+      display:inline-block;
+      font-size:20px;
+      font-weight: 700;
+      text-align: right;
+      margin-top:30px;
+      width:330px;
+      padding:15px 10px;
+      position:relative;
+    }
+    .content-1-products .btn-box a::before{
+      content:"";
+      height: 1px;
+      width:90%;
+      background-color:#002453;
+      position:absolute;
+      top:0;
+      left:0;
+      transition: all 0.5s ease;
+    }
+    .content-1-products .btn-box a:hover::before{
+      height:2px;
+      left:40px;
+    }
+    /* ------- content-1-products end------- */
     /* ------- main end ------- */
   </style>
 </body>
