@@ -12,13 +12,13 @@
 <body>
   <main>
     <div class="con">
-      <section class="content content-1-products center">
-        <div class="sec-title">
+      <section class="content content-1 center">
+        <div class="title">
           <img src="../img/imageye___-_plin-ic.png" alt="">
           <br>
           <span>Product</span>
         </div>
-        <div class="sec-product sec-product1 relative flex">
+        <div class="products product1 relative flex">
           <div class="bg-b"></div>
           <div class="img-box">
             <a href="#">
@@ -51,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div class="sec-product sec-product2 relative flex">
+        <div class="products product2 relative flex">
           <div class="bg-b"></div>
           <div class="text-boxs">
             <div class="text-box1">
@@ -84,7 +84,7 @@
             </a>
           </div>
         </div>
-        <div class="sec-product sec-product3 relative flex">
+        <div class="products product3 relative flex">
           <div class="bg-b"></div>
           <div class="img-box">
             <a href="#">
@@ -123,24 +123,53 @@
           </a>
         </div>
       </section>
-      <section class="content content-2 center border-R">
-        
+      <section class="content content-2 center relative">
+        <div class="history">
+          <h3>Thyane history</h3>
+          <div class="instashow">
+            <div class="loader">
+            </div>
+          </div>
+          <div class="btn-box center">
+            <a href="#">
+              Visit official Instagram
+            </a>
+          </div>
       </section>
+      <section class="content content-3">
+        <div class="contect">
+          <div>
+            <p>Visit official Instagram</p>
+          </div>
+          <div>
+            <p>
+              The place where you get invited, THYANE, is a store in the forest to provide you the shade of time.
+              <br>
+              Through this moment, you will face your real self living in a time of THYANE.
+            </p>
+          </div>
+          <div><a href="#">Storytelling : THYANE</a></div>
+          <div><img src="../img/imageye___-_mois-img23.png" alt=""></div>
+        </div>
+      </section>
+
     </div>
   </main>
 
   <style>
     /* ------- main start ------- */
     .con {
-      background-color: rgb(236, 230, 217);
+      background: #ece6d9 url(../img/imageye___-_body-bg.png) repeat top center;
     }
 
-    /* ------- content-1-products start------- */
-    .content-1-products{
+    /* ------- content-1 start------- */
+    .content-1 {
       width: 1600px;
+
     }
+
     /* ------- sec-title start ------- */
-    .sec-title {
+    .content-1 .title {
       text-align: center;
       color: rgb(13, 49, 83);
       font-size: 22px;
@@ -151,13 +180,13 @@
       z-index: 20;
     }
 
-    .sec-title img {
+    .content-1 .title img {
       display: inline-block;
     }
 
-    /* ------- sec-title end ------- */
-    /* ------- sec-product1 start ------- */
-    .sec-product {
+    /* ------- title end ------- */
+    /* ------- product1 start ------- */
+    .content-1 .products {
       margin: 80px 150px;
       padding: 0 30px;
       position: relative;
@@ -165,7 +194,7 @@
       /* border: 1px solid red; */
     }
 
-    .sec-product1 .bg-b {
+    .content-1 .product1 .bg-b {
       position: absolute;
       width: 674px;
       height: 600px;
@@ -175,11 +204,11 @@
       visibility: hidden;
     }
 
-    .sec-product1:hover .bg-b {
+    .content-1 .product1:hover .bg-b {
       visibility: visible;
     }
 
-    .sec-product1 .bg-b::after {
+    .content-1 .product1 .bg-b::after {
       content: "";
       position: absolute;
       width: 0;
@@ -191,24 +220,24 @@
       transition: all .3s 50ms ease-in-out;
     }
 
-    .sec-product1:hover .bg-b::after {
+    .content-1 .product1:hover .bg-b::after {
       width: 100%;
     }
 
-    .sec-product1 .img-box {
+    .content-1 .product1 .img-box {
       width: 50%;
     }
 
-    .sec-product1 .img-box img {
+    .content-1 .product1 .img-box img {
       width: 558px;
       margin: 0 auto;
     }
 
-    .sec-product1 .text-boxs {
+    .content-1 .product1 .text-boxs {
       margin-top: 80px;
     }
 
-    .sec-product1 .text-box1>span:nth-child(1) {
+    .content-1 .product1 .text-box1>span:nth-child(1) {
       font-size: 22px;
       cursor: pointer;
       display: block;
@@ -218,7 +247,7 @@
 
     }
 
-    .sec-product1 .text-box1>h3 {
+    .content-1 .product1 .text-box1>h3 {
       font-size: 38px;
       font-weight: 700;
       letter-spacing: -1px;
@@ -228,7 +257,7 @@
 
     }
 
-    .sec-product1 .text-box1>span:nth-child(3) {
+    .content-1 .product1 .text-box1>span:nth-child(3) {
       color: rgb(0, 36, 83);
       cursor: pointer;
       display: block;
@@ -239,7 +268,7 @@
 
     }
 
-    .sec-product1 .text-box2>a {
+    .content-1 .product1 .text-box2>a {
       color: rgb(131, 131, 131);
       display: block;
       font-size: 14px;
@@ -248,7 +277,7 @@
 
     }
 
-    .sec-product1 .text-box3 {
+    .content-1 .product1 .text-box3 {
       color: #002453;
       font-size: 28px;
       display: inline-block;
@@ -259,17 +288,17 @@
       margin-top: 15px;
     }
 
-    .sec-product1 .Btn-box {
+    .content-1 .product1 .Btn-box {
       margin-top: 50px;
       text-align: left;
       display: flex;
     }
 
-    .sec-product1 .Btn-box img {
+    .content-1 .product1 .Btn-box img {
       display: inline-block;
     }
 
-    .sec-product1 .Btn-box div:nth-child(1) {
+    .content-1 .product1 .Btn-box div:nth-child(1) {
       border: 1px solid #a1a1a1;
       width: 79px;
       height: 72px;
@@ -279,7 +308,7 @@
       display: inline-block;
     }
 
-    .sec-product1 .Btn-box div:nth-child(2) {
+    .content-1 .product1 .Btn-box div:nth-child(2) {
       background: #002453;
       border: 1px solid #002453;
       font-size: 18px;
@@ -294,16 +323,16 @@
       text-align: left;
     }
 
-    .sec-product1 .Btn-box div:nth-child(2)>span {
+    .content-1 .product1 .Btn-box div:nth-child(2)>span {
       margin-left: 20px;
     }
 
 
 
-    /* ------- sec-product1 end ------- */
+    /* ------- product1 end ------- */
 
-    /* ------- sec-product2 start ------- */
-    .sec-product2 .bg-b {
+    /* ------- product2 start ------- */
+    .content-1 .product2 .bg-b {
       position: absolute;
       width: 903px;
       height: 423px;
@@ -313,11 +342,11 @@
       visibility: hidden;
     }
 
-    .sec-product2:hover .bg-b {
+    .content-1 .product2:hover .bg-b {
       visibility: visible;
     }
 
-    .sec-product2 .bg-b::after {
+    .content-1 .product2 .bg-b::after {
       content: "";
       position: absolute;
       width: 0;
@@ -329,25 +358,25 @@
       transition: all .3s 50ms ease-in-out;
     }
 
-    .sec-product2:hover .bg-b::after {
+    .content-1 .product2:hover .bg-b::after {
       width: 100%;
     }
 
-    .sec-product2 .img-box {
+    .content-1 .product2 .img-box {
       width: 50%;
     }
 
-    .sec-product2 .img-box img {
+    .content-1 .product2 .img-box img {
       width: 558px;
       margin: 0 auto;
     }
 
-    .sec-product2 .text-boxs {
+    .content-1 .product2 .text-boxs {
       margin-top: 80px;
       width: 50%;
     }
 
-    .sec-product2 .text-box1>span:nth-child(1) {
+    .content-1 .product2 .text-box1>span:nth-child(1) {
       font-size: 22px;
       cursor: pointer;
       display: block;
@@ -357,7 +386,7 @@
 
     }
 
-    .sec-product2 .text-box1>h3 {
+    .content-1 .product2 .text-box1>h3 {
       font-size: 38px;
       font-weight: 700;
       letter-spacing: -1px;
@@ -367,7 +396,7 @@
 
     }
 
-    .sec-product2 .text-box1>span:nth-child(3) {
+    .content-1 .product2 .text-box1>span:nth-child(3) {
       color: rgb(0, 36, 83);
       cursor: pointer;
       display: block;
@@ -378,7 +407,7 @@
 
     }
 
-    .sec-product2 .text-box2>a {
+    .content-1 .product2 .text-box2>a {
       color: rgb(131, 131, 131);
       display: block;
       font-size: 14px;
@@ -387,7 +416,7 @@
 
     }
 
-    .sec-product2 .text-box3 {
+    .content-1 .product2 .text-box3 {
       color: #002453;
       font-size: 28px;
       display: inline-block;
@@ -398,17 +427,17 @@
       margin-top: 15px;
     }
 
-    .sec-product2 .Btn-box {
+    .content-1 .product2 .Btn-box {
       margin-top: 50px;
       text-align: left;
       display: flex;
     }
 
-    .sec-product2 .Btn-box img {
+    .content-1 .product2 .Btn-box img {
       display: inline-block;
     }
 
-    .sec-product2 .Btn-box div:nth-child(1) {
+    .content-1 .product2 .Btn-box div:nth-child(1) {
       border: 1px solid #a1a1a1;
       width: 79px;
       height: 72px;
@@ -418,7 +447,7 @@
       display: inline-block;
     }
 
-    .sec-product2 .Btn-box div:nth-child(2) {
+    .content-1 .product2 .Btn-box div:nth-child(2) {
       background: #002453;
       border: 1px solid #002453;
       font-size: 18px;
@@ -433,14 +462,14 @@
       text-align: left;
     }
 
-    .sec-product2 .Btn-box div:nth-child(2)>span {
+    .content-1 .product2 .Btn-box div:nth-child(2)>span {
       margin-left: 20px;
     }
 
-    /* ------- sec-product2 end ------- */
+    /* ------- product2 end ------- */
 
-    /* ------- sec-product3 start ------- */
-    .sec-product3 .bg-b {
+    /* ------- product3 start ------- */
+    .content-1 .product3 .bg-b {
       position: absolute;
       width: 573px;
       height: 600px;
@@ -450,11 +479,11 @@
       visibility: hidden;
     }
 
-    .sec-product3:hover .bg-b {
+    .content-1 .product3:hover .bg-b {
       visibility: visible;
     }
 
-    .sec-product3 .bg-b::after {
+    .content-1 .product3 .bg-b::after {
       content: "";
       position: absolute;
       width: 0;
@@ -466,25 +495,25 @@
       transition: all .3s 50ms ease-in-out;
     }
 
-    .sec-product3:hover .bg-b::after {
+    .content-1 .product3:hover .bg-b::after {
       width: 100%;
     }
 
-    .sec-product3 .img-box {
+    .content-1 .product3 .img-box {
       width: 50%;
     }
 
-    .sec-product3 .img-box img {
+    .content-1 .product3 .img-box img {
       width: 558px;
       margin: 0 auto;
     }
 
-    .sec-product3 .text-boxs {
+    .content-1 .product3 .text-boxs {
       margin-top: 80px;
       width: 50%;
     }
 
-    .sec-product3 .text-box1>span:nth-child(1) {
+    .content-1 .product3 .text-box1>span:nth-child(1) {
       font-size: 22px;
       cursor: pointer;
       display: block;
@@ -494,7 +523,7 @@
 
     }
 
-    .sec-product3 .text-box1>h3 {
+    .content-1 .product3 .text-box1>h3 {
       font-size: 38px;
       font-weight: 700;
       letter-spacing: -1px;
@@ -504,7 +533,7 @@
 
     }
 
-    .sec-product3 .text-box1>span:nth-child(3) {
+    .content-1 .product3 .text-box1>span:nth-child(3) {
       color: rgb(0, 36, 83);
       cursor: pointer;
       display: block;
@@ -515,7 +544,7 @@
 
     }
 
-    .sec-product3 .text-box2>a {
+    .content-1 .product3 .text-box2>a {
       color: rgb(131, 131, 131);
       display: block;
       font-size: 14px;
@@ -524,7 +553,7 @@
 
     }
 
-    .sec-product3 .text-box3 {
+    .content-1 .product3 .text-box3 {
       color: #002453;
       font-size: 28px;
       display: inline-block;
@@ -535,17 +564,17 @@
       margin-top: 15px;
     }
 
-    .sec-product3 .Btn-box {
+    .content-1 .product3 .Btn-box {
       margin-top: 50px;
       text-align: left;
       display: flex;
     }
 
-    .sec-product3 .Btn-box img {
+    .content-1 .product3 .Btn-box img {
       display: inline-block;
     }
 
-    .sec-product3 .Btn-box div:nth-child(1) {
+    .content-1 .product3 .Btn-box div:nth-child(1) {
       border: 1px solid #a1a1a1;
       width: 79px;
       height: 72px;
@@ -555,7 +584,7 @@
       display: inline-block;
     }
 
-    .sec-product3 .Btn-box div:nth-child(2) {
+    .content-1 .product3 .Btn-box div:nth-child(2) {
       background: #002453;
       border: 1px solid #002453;
       font-size: 18px;
@@ -570,40 +599,160 @@
       text-align: left;
     }
 
-    .sec-product3 .Btn-box div:nth-child(2)>span {
+    .content-1 .product3 .Btn-box div:nth-child(2)>span {
       margin-left: 20px;
     }
 
     /* ------- sec-product3 end ------- */
-    .content-1-products .btn-box{
-      max-width:1240px;
+    .content-1 .btn-box {
+      max-width: 1240px;
     }
-    .content-1-products .btn-box a{
-      color:#0d3153;
-      display:inline-block;
-      font-size:20px;
+
+    .content-1 .btn-box a {
+      color: #0d3153;
+      display: inline-block;
+      font-size: 20px;
       font-weight: 700;
       text-align: right;
-      margin-top:30px;
-      width:330px;
-      padding:15px 10px;
-      position:relative;
+      margin-top: 30px;
+      width: 330px;
+      padding: 15px 10px;
+      position: relative;
     }
-    .content-1-products .btn-box a::before{
-      content:"";
+
+    .content-1 .btn-box a::before {
+      content: "";
       height: 1px;
-      width:90%;
-      background-color:#002453;
-      position:absolute;
-      top:0;
-      left:0;
+      width: 90%;
+      background-color: #002453;
+      position: absolute;
+      top: 0;
+      left: 0;
       transition: all 0.5s ease;
     }
-    .content-1-products .btn-box a:hover::before{
-      height:2px;
-      left:40px;
+
+    .content-1 .btn-box a:hover::before {
+      height: 2px;
+      left: 40px;
     }
+
     /* ------- content-1-products end------- */
+    /* ------- content-2 start ------- */
+    .content-2 {
+      padding: 113px 30px;
+      overflow: hidden;
+    }
+
+    .content-2::before {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      top: 146px;
+      left: 0;
+      height: 100%;
+      width: 100vw;
+      display: block;
+      z-index: 1;
+    }
+
+    .content-2 .history {
+      position: relative;
+      z-index: 10;
+    }
+
+    .content-2 .history h3 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #002453;
+      font-family: 'italic';
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .content-2 .history .instashow {
+      max-width: 1640px;
+      padding: 30px;
+      margin: 0 auto;
+      height: 340px;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .content-2 .history .instashow .loader {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .content-2 .history .instashow .loader::before {
+      content: "";
+      position: absolute;
+      border: 4px solid #ddd;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(255, 255, 255, .3);
+      animation-name: instar-loader;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes instar-loader {
+      0% {
+        opacity: 1;
+        transform: scale(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+
+    .content-2 .history .btn-box {
+      max-width: 1640px;
+      text-align: right;
+    }
+
+    .content-2 .history .btn-box a {
+      color: #0d3153;
+      font-size: 20px;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 10px;
+      width: 330px;
+      text-align: right;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .content-2 .history .btn-box a::before {
+      content: "";
+      display: block;
+      width: 90%;
+      height: 1px;
+      background-color: #002453;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all .5s ease;
+    }
+
+    .content-2 .history .btn-box:hover a::before {
+      left: 10%;
+      height: 2px;
+    }
+
+    /* ------- content-2 end ------- */
+    /* ------- content-3 start ------- */
+    
+    /* ------- content-3 end ------- */
     /* ------- main end ------- */
   </style>
 </body>
