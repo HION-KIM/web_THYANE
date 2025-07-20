@@ -11,13 +11,332 @@
 </head>
 
 <body>
-
-    <main class="container">
-        <section class="section sec1">
-
-        </section>
-    </main>
+    <div>
+        <header class="topbar fixed w-100 blockborder-R">
+            <div class="topbar__inner-1 con-max-width center flex">
+                <div class="topbar__inner-1__lang-box flex">
+                    <a href="#">kr</a>
+                </div>
+                <div class="menu-box topbar__inner-1__menu-box-1 ">
+                    <ul>
+                        <li>
+                            <a href="#"><span>Notice</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>CS Center</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Membership</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topbar__inner-1__logo-box flex grow box-center">
+                    <img src="../img/imageye___-_logo-w.png" alt="" />
+                </div>
+                <div class="menu-box topbar__inner-1__menu-box-2">
+                    <ul>
+                        <li>
+                            <a href="#"><span>Login</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Join</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Mypage</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Cart</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="topbar__inner-2 con-max-width center flex">
+                <div class="topbar__inner-2__hamberger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="menu-box topbar__inner-2__menu-box1 grow h-100">
+                    <ul class="flex box-center">
+                        <li>
+                            <a href="#"><span>Home</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Brand story</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Shop</span></a>
+                            <ul>
+                                <li><a href="#">상품유형별</a></li>
+                                <li><a href="#">전체</a></li>
+                                <li><a href="#">클렌징워터</a></li>
+                                <li><a href="#">토너</a></li>
+                                <li><a href="#">에센스</a></li>
+                                <li><a href="#">수분크림</a></li>
+                                <li><a href="#">선로션</a></li>
+                                <li><a href="#">코튼패드</a></li>
+                                <li><a href="#">액세서리</a></li>
+                                <li><a href="#">세트상품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span>Community</span></a>
+                            <ul>
+                                <li><a href="#">Review</a></li>
+                                <li><a href="#">CS Center</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span>Media</span></a>
+                            <ul>
+                                <li><a href="#">방송영상</a></li>
+                                <li><a href="#">매거진</a></li>
+                                <li><a href="#">언론기사</a></li>
+                                <li><a href="#">협찬</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span>Event</span></a>
+                            <ul>
+                                <li><a href="#">진행중 이벤트</a></li>
+                                <li><a href="#">종료된 이벤트</a></li>
+                                <li><a href="#">당첨자 발표</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topbar__inner-2__search-box">
+                    <img src="../img/sear-icon.png" alt="" />
+                </div>
+            </div>
+        </header>
     </div>
+    <section class="main__banner">
+        <div class="swiper-bar">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="swiper-btn">
+            <div class="imgbox prev"></div>
+            <div class="imgbox next"></div>
+        </div>
+    </section>
+    <style>
+        /* ------- topbar start ------- */
+        .topbar {
+            top: 0;
+            height: 82px;
+            color: #fff;
+            z-index: 1000;
+        }
+
+        /* ------- topbar inner-1 start ------- */
+        .topbar__inner-1 {
+            box-sizing: border-box;
+            display: flex;
+            padding: 0 30px;
+            height: 82px;
+            font-size: 15px;
+            border-bottom: 1px solid rgb(102, 102, 102);
+        }
+
+        /* ------- topbar__inner-1__lang-box start -------*/
+        .topbar__inner-1__lang-box {
+            align-items: center;
+            width: 90px;
+        }
+
+        /* ------- topbar__inner-1__lang-box end -------*/
+        /* ------- menu setting start-------  */
+        /* ------- menu local setting start-------  */
+        .topbar .menu-box>ul {
+            height: 100%;
+        }
+
+        .topbar .menu-box>ul>li {
+            display: inline-block;
+            height: 100%;
+        }
+
+        .topbar .menu-box>ul>li>a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* ------- menu local setting end-------  */
+
+        .topbar__inner-1__menu-box-1>ul {
+            padding: 0 50px;
+            border-left: 1px solid rgb(102, 102, 102);
+            border-right: 1px solid rgb(102, 102, 102);
+        }
+
+        .topbar__inner-1__menu-box-1>ul>li {
+            margin-right: 75px;
+        }
+
+        .topbar__inner-1__menu-box-1>ul>li:last-child {
+            margin-right: 0;
+        }
+
+        .topbar__inner-1__menu-box-2>ul {
+            padding-left: 50px;
+            border-left: 1px solid rgb(102, 102, 102);
+        }
+
+        .topbar__inner-1__menu-box-2>ul>li {
+            margin-right: 75px;
+        }
+
+        .topbar__inner-1__menu-box-2>ul>li:last-child {
+            margin: 0;
+        }
+
+        /* ------- menu setting end -------  */
+
+        .topbar__inner-1__lang-box {
+            width: 90px;
+        }
+
+        /* ------- logo box ------- */
+        .topbar__inner-1__logo-box {
+            height: 100%;
+        }
+
+        .topbar__inner-1__logo-box>img {
+            width: 138px;
+        }
+
+        /* ------- topbar inner-1 end ------- */
+        /* ------- topbar inner-2 start ------- */
+        .topbar__inner-2 {
+            padding: 0 30px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            height: 78px;
+        }
+
+        /* ------- topbar__inner-2__hamberger start ------- */
+        .topbar__inner-2__hamberger {
+            cursor: pointer;
+        }
+
+        .topbar__inner-2__hamberger>div {
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            margin: 7px 0;
+        }
+
+        @keyframes HBGAni {}
+
+        /* ------- topbar__inner-2__hamberger end ------- */
+        /* ------- menu-box topbar__inner-2__menu-box1 start ------- */
+        .topbar__inner-2__menu-box1>ul>li {
+            margin-right: 80px;
+            position: relative;
+        }
+
+        .topbar__inner-2__menu-box1>ul>li:last-child {
+            margin-right: 0;
+        }
+
+        /* ------- menu-box topbar__inner-2__menu-box1 2차 메뉴 start ------- */
+        .topbar__inner-2__menu-box1>ul>li>ul {
+            box-sizing: border-box;
+            font-size: 14px;
+            width: 130px;
+            margin-left: -65px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            padding: 10px 19px;
+            background-color: #fff;
+            color: rgb(13, 49, 83);
+            letter-spacing: 0.5px;
+            line-height: 22.4px;
+            visibility: hidden;
+            /* max-height:0; */
+            opacity: 0;
+            transition: all .5s, ease;
+            overflow: hidden;
+            box-shadow: inset 0 0 0 1px #bfbfbf;
+        }
+
+        .topbar__inner-2__menu-box1>ul>li:hover>ul {
+            visibility: visible;
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        /* ------- menu-box topbar__inner-2__menu-box1 2차 메뉴 end ------- */
+
+        /* menu-box topbar__inner-2__menu-box1 end */
+        /* ------- topbar__inner-2__search-box start------- */
+
+        /* ------- topbar__inner-2__search-box end------- */
+        /* ------- topbar inner-2 end ------- */
+
+        /* ------- topbar end ------- */
+        .main__banner {
+            background-image: url(../img/imageye___-_th_01.jpg);
+            background-size: cover;
+            height: 106vh;
+            position: relative;
+        }
+
+        .swiper-bar {
+            position: absolute;
+            left: 0;
+            bottom: 94px;
+            height: 2px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .swiper-bar>div {
+            display: inline-block;
+            height: 100%;
+            width: 79px;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .swiper-bar>div:first-child {
+            background-color: #fff;
+        }
+
+        .swiper-btn {
+            width: 198px;
+            height: 14px;
+            position: absolute;
+            right: 80px;
+            bottom: 80px;
+            background: url(../img/slide-bt03.png) no-repeat center center;
+        }
+
+        .swiper-btn>.imgbox {
+            width: 78px;
+            height: 14px;
+            position: absolute;
+        }
+
+        .swiper-btn>.prev {
+            background-image: url(../img/slide-bt01.png);
+            left: 0;
+            top: 0;
+        }
+
+        .swiper-btn>.next {
+            background-image: url(../img/slide-bt02.png);
+            right: 0;
+            top: 0;
+        }
+    </style>
 </body>
 
 </html>

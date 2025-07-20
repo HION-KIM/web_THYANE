@@ -12,6 +12,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'italic';
     src: url('font/CrimsonText/CrimsonText-Italic.ttf');
@@ -23,7 +24,8 @@
 body,
 ul,
 li,
-h3 {
+h3,
+p {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -91,9 +93,11 @@ body img {
 /* 공통 커스텀 */
 
 body {
-    background-color: gray;
+    background-color: #fff;
     font-family: 'CrimsonText', 'NotoSansKR', sans-serif;
     overflow-x: hidden;
+    letter-spacing: -0.5px;
+    line-height: 1.6;
 }
 
 .con-max-width {

@@ -137,21 +137,33 @@
           </div>
       </section>
       <section class="content content-3">
-        <div class="contect">
-          <div>
-            <p>Visit official Instagram</p>
+        <div>
+          <div Class="title">
+            <p>Please lend us your time for a moment.</p>
           </div>
-          <div>
+          <div class="text">
             <p>
               The place where you get invited, THYANE, is a store in the forest to provide you the shade of time.
               <br>
               Through this moment, you will face your real self living in a time of THYANE.
             </p>
           </div>
-          <div><a href="#">Storytelling : THYANE</a></div>
-          <div><img src="../img/imageye___-_mois-img23.png" alt=""></div>
+          <br>
+          <br>
+          <div class="btn"><a href="#">Storytelling : THYANE</a></div>
+          <div class="img-box"><img src="../img/imageye___-_mois-img23.png" alt=""></div>
         </div>
       </section>
+
+      <div class="product-menu">
+        <div class="title"><span>최근 본 상품</span></div>
+        <div class="main"></div>
+        <div class="arr-btn">
+          <img src="../img/wing_bt_prew.gif" alt="">
+          <img src="../img/wing_bt_next.gif" alt="">
+        </div>
+        <div class="closed"><span>닫기</span></div>
+      </div>
 
     </div>
   </main>
@@ -160,6 +172,7 @@
     /* ------- main start ------- */
     .con {
       background: #ece6d9 url(../img/imageye___-_body-bg.png) repeat top center;
+      margin-bottom:100px;
     }
 
     /* ------- content-1 start------- */
@@ -751,8 +764,104 @@
 
     /* ------- content-2 end ------- */
     /* ------- content-3 start ------- */
-    
+    .content-3 {
+      background-color: #fff;
+    }
+
+    .content-3>div {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .content-3 .title {
+      text-align: center;
+      font-size: 22px;
+      color: #002453;
+      line-height: 1.2;
+      width: 100%;
+      font-family: 'italic';
+      margin-bottom: 50px;
+    }
+
+    .content-3 .text {
+      font-size: 18px;
+      color: #9d9d9d;
+      margin-bottom: 50px;
+    }
+
+    .content-3 .btn {
+      text-align: center;
+    }
+
+    .content-3 .btn a {
+      padding: 30px 20px 3px 20px;
+      font-size: 18px;
+      font-weight: 700;
+      height: 72px;
+      text-align: center;
+      color: #002453;
+      bordeR: 1px solid #b2bdcb;
+    }
+
+    .content-3 .img-box {
+      text-align: center;
+      margin: 80px auto 0 auto;
+
+    }
+
+    .content-3 .img-box img {
+      display: inline-block;
+      max-width: 100%;
+    }
+
     /* ------- content-3 end ------- */
+    .product-menu{
+      font-size:14px;
+      letter-spacing: -0.5px;
+      line-height:1.6;
+      box-sizing: border-box;
+      position:fixed;
+      width:130px;
+      top:50%;
+      right:30px;
+      background-color:#fff;
+      border:1px solid #e0e0e0;
+      transform:translateY(-50%);
+      z-index:1000;
+      margin-top: 20px;
+    }
+    .producth-menu.active{
+      display:none;
+    }
+    .product-menu .title{
+      background-color:#0d3153;
+      padding:10px 5px;
+      color:#fff;
+      text-align: center;
+    }
+
+    .product-menu .main{
+      height:219px;
+      overflow: hidden;
+    }
+
+    .product-menu .arr-btn{
+      text-align: center;
+      padding: 4px 0;
+    }
+    .product-menu .arr-btn img{
+      display:inline-block;
+    }
+    .product-menu .closed {
+      text-align: center;
+      padding:10px 5px;
+      color: #0d3153;
+      border: 1px solid #e0e0e0;
+      cursor:pointer;
+
+
+
+    }
     /* ------- main end ------- */
   </style>
 </body>
