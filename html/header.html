@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>header</title>
-
+  <!-- 외부 링크 -->
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <!-- 내부링크 -->
   <link rel="stylesheet" href="../link.css">
 </head>
 
@@ -112,6 +115,12 @@
   </div>
 
   <style>
+    /* 임시 */
+    body {
+      background-color: #bfbfbf;
+      height: 10000px;
+    }
+
     /* ------- topbar start ------- */
     .topbar {
       top: 0;
@@ -230,6 +239,23 @@
       position: relative;
     }
 
+    .topbar__inner-2__menu-box1>ul>li::after{
+      content:"";
+      position:absolute;
+      display: block;
+      bottom:28px;
+      left:50%;
+      transform:translateX(-50%);
+      width:0;
+      height:2px;
+      background-color:#fff;
+      transition:all .6s cubic-bezier(0.7, 0, 0.1, 1);
+
+    }
+    .topbar__inner-2__menu-box1>ul>li:hover::after{
+      width:100%;
+    }
+
     .topbar__inner-2__menu-box1>ul>li:last-child {
       margin-right: 0;
     }
@@ -249,7 +275,7 @@
       letter-spacing: 0.5px;
       line-height: 22.4px;
       visibility: hidden;
-      /* max-height:0; */
+      max-height:0;
       opacity: 0;
       transition: all .5s, ease;
       overflow: hidden;
