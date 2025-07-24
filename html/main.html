@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>main</title>
-
+  <!-- 외부 링크 -->
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- 내부링크 -->
   <link rel="stylesheet" href="../link.css">
 </head>
 
@@ -172,7 +175,7 @@
     /* ------- main start ------- */
     .con {
       background: #ece6d9 url(../img/imageye___-_body-bg.png) repeat top center;
-      margin-bottom:100px;
+      margin-bottom: 100px;
     }
 
     /* ------- content-1 start------- */
@@ -794,13 +797,41 @@
     }
 
     .content-3 .btn a {
+      display: inline-block;
+      box-sizing: border-box;
       padding: 30px 20px 3px 20px;
       font-size: 18px;
       font-weight: 700;
+      letter-spacing: .8px;
       height: 72px;
+      width: 240px;
       text-align: center;
       color: #002453;
-      bordeR: 1px solid #b2bdcb;
+      border: 1px solid #b2bdcb;
+      /* opacity: 0;
+      transition: all 1s cubic-bezier(.165, .84, .44, 1) 0.2s;
+      transform: translateY(100px); */
+      animation-name: content3-Btnup;
+      animation-duration: 1000;
+      animation-timing-function: cubic-bezier(.165, .84, .44, 1);
+      animation-iteration-count: 1;
+    }
+
+    /* .content-3 .btn a.active{
+      opacity: 1;
+      transform:translateY(0);
+    } */
+
+    @keyframes content3-Btnup {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .content-3 .img-box {
@@ -815,56 +846,84 @@
     }
 
     /* ------- content-3 end ------- */
-    .product-menu{
-      font-size:14px;
+    .product-menu {
+      font-size: 14px;
       letter-spacing: -0.5px;
-      line-height:1.6;
+      line-height: 1.6;
       box-sizing: border-box;
-      position:fixed;
-      width:130px;
-      top:50%;
-      right:30px;
-      background-color:#fff;
-      border:1px solid #e0e0e0;
-      transform:translateY(-50%);
-      z-index:1000;
+      position: fixed;
+      width: 130px;
+      top: 50%;
+      right: 30px;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      transform: translateY(-50%);
+      z-index: 1000;
       margin-top: 20px;
+      visibility: hidden;
+      opacity: 0;
+      transition: all .4s ease;
     }
-    .producth-menu.active{
-      display:none;
+
+    .product-menu.active {
+      visibility: visible;
+      opacity: 1;
     }
-    .product-menu .title{
-      background-color:#0d3153;
-      padding:10px 5px;
-      color:#fff;
+
+    .product-menu .title {
+      background-color: #0d3153;
+      padding: 10px 5px;
+      color: #fff;
       text-align: center;
     }
 
-    .product-menu .main{
-      height:219px;
+    .product-menu .main {
+      height: 219px;
       overflow: hidden;
     }
 
-    .product-menu .arr-btn{
+    .product-menu .arr-btn {
       text-align: center;
       padding: 4px 0;
     }
-    .product-menu .arr-btn img{
-      display:inline-block;
+
+    .product-menu .arr-btn img {
+      display: inline-block;
     }
+
     .product-menu .closed {
       text-align: center;
-      padding:10px 5px;
+      padding: 10px 5px;
       color: #0d3153;
       border: 1px solid #e0e0e0;
-      cursor:pointer;
+      cursor: pointer;
 
 
 
     }
+
     /* ------- main end ------- */
     /* ------- main end ------- */
   </style>
+
+  <script>
+    function productMenuActive() {
+      $(window).scroll(function () {
+        var scrollTop2 = $(window).scrollTop();
+
+        if (scrollTop2 >= 1000) {
+          $('.product-menu').addClass('active');
+        } else {
+          $('.product-menu').removeClass('active');
+        }
+      });
+    }
+
+
+    productMenuActive();
+
+
+  </script>
 </body>
 
 </html>

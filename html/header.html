@@ -113,7 +113,8 @@
         </div>
         <div class="topbar__inner-2__search-box flex box-center h-100">
           <div><input class="search-input" type="text"></div>
-          <div class="search-btn"><img src="../img/sear-icon.png" alt="" /></div>
+          <div class="search-btn search-icon-w"><img src="../img/sear-icon.png" alt="" /></div>
+          <div class="search-btn search-icon-b"><img src="../img/imageye___-_sear-icon-b.png" alt="" /></div>
         </div>
       </div>
     </header>
@@ -147,6 +148,14 @@
       height: 82px;
       font-size: 15px;
       border-bottom: 1px solid rgb(102, 102, 102);
+      overflow: hidden;
+      transition: all .5s ease;
+      opacity: 1;
+    }
+
+    .topbar__inner-1.hide {
+      height: 0;
+      opacity: 0;
     }
 
     /* ------- topbar__inner-1__lang-box start -------*/
@@ -222,12 +231,15 @@
     .topbar__inner-2 {
       padding: 0 30px;
       box-sizing: border-box;
-      /* display: flex;
-      align-items: center; */
       font-size: 18px;
       height: 78px;
-      /* justify-content: space-between; */
       position: relative;
+      transition: all .5s ease;
+    }
+
+    .topbar__inner-2.active {
+      background-color: #fff;
+      color: rgb(13, 49, 83);
     }
 
     /* ------- topbar__inner-2__hamberger start ------- */
@@ -245,6 +257,10 @@
       background-color: #fff;
       margin: 7px 0;
       position: relative;
+    }
+
+    .topbar__inner-2.active .topbar__inner-2__hamberger>div {
+      background-color: rgb(13, 49, 83);
     }
 
     .topbar__inner-2__hamberger>div::after {
@@ -351,11 +367,22 @@
       position: absolute;
       top: 0;
       right: 30px;
+    }
 
+    .topbar__inner-2__search-box .search-icon-b {
+      display: none;
+    }
+
+    .topbar__inner-2.active .topbar__inner-2__search-box .search-icon-b {
+      display: block;
+    }
+
+    .topbar__inner-2.active .topbar__inner-2__search-box .search-icon-w {
+      display: none;
     }
 
     .topbar__inner-2__search-box .search-input {
-      display:none;
+      display: none;
       box-sizing: border-box;
       height: 50px;
       line-height: 48px;
@@ -369,15 +396,21 @@
       color: #fff;
 
     }
-    .topbar__inner-2__search-box .search-input.active{
-      display:block
+
+    .topbar__inner-2.active .topbar__inner-2__search-box .search-input.active {
+      color: rgb(17, 17, 17);
+    }
+
+    .topbar__inner-2__search-box .search-input.active {
+      display: block
     }
 
     .topbar__inner-2__search-box .search-input:focus {
       outline: none;
     }
-    .topbar__inner-2__search-box .search-btn{
-      cursor:pointer;
+
+    .topbar__inner-2__search-box .search-btn {
+      cursor: pointer;
     }
 
     /* ------- topbar__inner-2__search-box end------- */
@@ -387,10 +420,31 @@
   </style>
 
   <script>
-    $(".search-btn").click(function(){
-      $(".search-input").addClass('active').focus();
-      console.log("1");
-    });
+    function SearchBtnActive() {
+      $(".search-btn").click(function () {
+        $(".search-input").addClass('active').focus();
+        console.log("1");
+      });
+    }
+
+    function TopbarHide() {
+      $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop >= 400) {
+          $('.topbar__inner-1').addClass('hide');
+          $('.topbar__inner-2').addClass('active');
+          $()
+        }
+        else if (scrollTop == 0) {
+          $('.topbar__inner-1').removeClass('hide');
+          $('.topbar__inner-2').removeClass('active');
+        }
+      })
+    }
+
+    SearchBtnActive();
+    TopbarHide();
 
   </script>
 
