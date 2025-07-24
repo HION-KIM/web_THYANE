@@ -7,14 +7,14 @@
   <title>header</title>
   <!-- 외부 링크 -->
   <!-- 제이쿼리 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- 내부링크 -->
   <link rel="stylesheet" href="../link.css">
 </head>
 
 <body>
   <div>
-    <header class="topbar fixed w-100 blockborder-R">
+    <header class="topbar fixed w-100 block">
       <div class="topbar__inner-1 con-max-width center flex">
         <div class="topbar__inner-1__lang-box flex">
           <a href="#">kr</a>
@@ -52,14 +52,14 @@
           </ul>
         </div>
       </div>
-      <div class="topbar__inner-2 con-max-width center flex">
+      <div class="topbar__inner-2 con-max-width center">
         <div class="topbar__inner-2__hamberger">
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <div class="menu-box topbar__inner-2__menu-box1 grow h-100">
-          <ul class="flex box-center">
+        <div class="menu-box topbar__inner-2__menu-box1 h-100 center">
+          <ul class="flex box-center inline-block">
             <li>
               <a href="#"><span>Home</span></a>
             </li>
@@ -69,16 +69,20 @@
             <li>
               <a href="#"><span>Shop</span></a>
               <ul>
-                <li><a href="#">상품유형별</a></li>
-                <li><a href="#">전체</a></li>
-                <li><a href="#">클렌징워터</a></li>
-                <li><a href="#">토너</a></li>
-                <li><a href="#">에센스</a></li>
-                <li><a href="#">수분크림</a></li>
-                <li><a href="#">선로션</a></li>
-                <li><a href="#">코튼패드</a></li>
-                <li><a href="#">액세서리</a></li>
-                <li><a href="#">세트상품</a></li>
+                <li><a href="#">상품유형별</a>
+                  <ul>
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">클렌징워터</a></li>
+                    <li><a href="#">토너</a></li>
+                    <li><a href="#">에센스</a></li>
+                    <li><a href="#">수분크림</a></li>
+                    <li><a href="#">선로션</a></li>
+                    <li><a href="#">코튼패드</a></li>
+                    <li><a href="#">액세서리</a></li>
+                    <li><a href="#">세트상품</a></li>
+                  </ul>
+                </li>
+
               </ul>
             </li>
             <li>
@@ -107,8 +111,9 @@
             </li>
           </ul>
         </div>
-        <div class="topbar__inner-2__search-box">
-          <img src="../img/sear-icon.png" alt="" />
+        <div class="topbar__inner-2__search-box flex box-center h-100">
+          <div><input class="search-input" type="text"></div>
+          <div class="search-btn"><img src="../img/sear-icon.png" alt="" /></div>
         </div>
       </div>
     </header>
@@ -127,6 +132,11 @@
       height: 82px;
       color: #fff;
       z-index: 1000;
+    }
+
+    .topbar a,
+    .topbar ul {
+      white-space: nowrap;
     }
 
     /* ------- topbar inner-1 start ------- */
@@ -212,15 +222,21 @@
     .topbar__inner-2 {
       padding: 0 30px;
       box-sizing: border-box;
-      display: flex;
-      align-items: center;
+      /* display: flex;
+      align-items: center; */
       font-size: 18px;
       height: 78px;
+      /* justify-content: space-between; */
+      position: relative;
     }
 
     /* ------- topbar__inner-2__hamberger start ------- */
     .topbar__inner-2__hamberger {
       cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%)
     }
 
     .topbar__inner-2__hamberger>div {
@@ -228,9 +244,32 @@
       height: 2px;
       background-color: #fff;
       margin: 7px 0;
+      position: relative;
     }
 
-    @keyframes HBGAni {}
+    .topbar__inner-2__hamberger>div::after {
+      content: "";
+      background-color: #BABABB;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 2px;
+      width: 0;
+      transition: all .7s ease;
+    }
+
+    .topbar__inner-2__hamberger>div:nth-child(2):after {
+      transition: all .7s .1s ease;
+    }
+
+    .topbar__inner-2__hamberger>div:nth-child(3):after {
+      transition: all .7s .2s ease;
+    }
+
+    .topbar__inner-2__hamberger:hover>div::after {
+      width: 100%;
+    }
+
 
     /* ------- topbar__inner-2__hamberger end ------- */
     /* ------- menu-box topbar__inner-2__menu-box1 start ------- */
@@ -239,21 +278,22 @@
       position: relative;
     }
 
-    .topbar__inner-2__menu-box1>ul>li::after{
-      content:"";
-      position:absolute;
+    .topbar__inner-2__menu-box1>ul>li::after {
+      content: "";
+      position: absolute;
       display: block;
-      bottom:28px;
-      left:50%;
-      transform:translateX(-50%);
-      width:0;
-      height:2px;
-      background-color:#fff;
-      transition:all .6s cubic-bezier(0.7, 0, 0.1, 1);
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: all .6s cubic-bezier(0.7, 0, 0.1, 1);
 
     }
-    .topbar__inner-2__menu-box1>ul>li:hover::after{
-      width:100%;
+
+    .topbar__inner-2__menu-box1>ul>li:hover::after {
+      width: 100%;
     }
 
     .topbar__inner-2__menu-box1>ul>li:last-child {
@@ -263,41 +303,96 @@
     /* ------- menu-box topbar__inner-2__menu-box1 2차 메뉴 start ------- */
     .topbar__inner-2__menu-box1>ul>li>ul {
       box-sizing: border-box;
-      font-size: 14px;
       width: 130px;
+      height: 0;
       margin-left: -65px;
       position: absolute;
       top: 100%;
       left: 50%;
-      padding: 10px 19px;
+      padding: 0px 19px;
       background-color: #fff;
-      color: rgb(13, 49, 83);
-      letter-spacing: 0.5px;
-      line-height: 22.4px;
-      visibility: hidden;
-      max-height:0;
-      opacity: 0;
-      transition: all .5s, ease;
-      overflow: hidden;
+      transition: all .5s ease;
       box-shadow: inset 0 0 0 1px #bfbfbf;
     }
 
     .topbar__inner-2__menu-box1>ul>li:hover>ul {
-      visibility: visible;
-      max-height: 500px;
-      opacity: 1;
+      padding: 10px 19px;
+      height: auto;
+    }
+
+    .topbar__inner-2__menu-box1>ul>li>ul>li {
+      color: rgb(13, 49, 83);
+      letter-spacing: -0.5px;
+      line-height: 35px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .topbar__inner-2__menu-box1>ul>li:nth-child(3)>ul>li {
+      font-weight: 600;
+    }
+
+    .topbar__inner-2__menu-box1>ul>li:nth-child(3)>ul>li>ul>li {
+      font-weight: 400;
+      line-height: 28px;
+      color: #999;
+    }
+
+    .topbar__inner-2__menu-box1>ul>li:nth-child(3)>ul>li>ul>li:last-child {
+      color: rgb(13, 49, 83);
+      font-weight: 600;
     }
 
     /* ------- menu-box topbar__inner-2__menu-box1 2차 메뉴 end ------- */
 
     /* menu-box topbar__inner-2__menu-box1 end */
     /* ------- topbar__inner-2__search-box start------- */
+    .topbar__inner-2__search-box {
+      position: absolute;
+      top: 0;
+      right: 30px;
+
+    }
+
+    .topbar__inner-2__search-box .search-input {
+      display:none;
+      box-sizing: border-box;
+      height: 50px;
+      line-height: 48px;
+      padding: 5px 10px;
+      border: none;
+      background-color: transparent;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 400;
+      width: 135px;
+      color: #fff;
+
+    }
+    .topbar__inner-2__search-box .search-input.active{
+      display:block
+    }
+
+    .topbar__inner-2__search-box .search-input:focus {
+      outline: none;
+    }
+    .topbar__inner-2__search-box .search-btn{
+      cursor:pointer;
+    }
 
     /* ------- topbar__inner-2__search-box end------- */
     /* ------- topbar inner-2 end ------- */
 
     /* ------- topbar end ------- */
   </style>
+
+  <script>
+    $(".search-btn").click(function(){
+      $(".search-input").addClass('active').focus();
+      console.log("1");
+    });
+
+  </script>
 
 
 </body>

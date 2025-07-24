@@ -54,7 +54,10 @@ body img {
 }
 
 .block {
-    display: block
+    display: block;
+}
+.inline-block {
+    display: inline-block;
 }
 
 .grow {
