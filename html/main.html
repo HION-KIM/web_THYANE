@@ -8,6 +8,11 @@
   <!-- 외부 링크 -->
   <!-- 제이쿼리 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
   <!-- 내부링크 -->
   <link rel="stylesheet" href="../link.css">
 </head>
@@ -153,8 +158,8 @@
           </div>
           <br>
           <br>
-          <div class="btn"><a href="#">Storytelling : THYANE</a></div>
-          <div class="img-box"><img src="../img/imageye___-_mois-img23.png" alt=""></div>
+          <div class="btn" data-aos data-aos-once="true"><a href="#">Storytelling : THYANE</a></div>
+          <div class=" img-box"><img src="../img/imageye___-_mois-img23.png" alt=""></div>
         </div>
       </section>
 
@@ -796,7 +801,7 @@
       text-align: center;
     }
 
-    .content-3 .btn a {
+    .content-3 .btn.aos-animate a {
       display: inline-block;
       box-sizing: border-box;
       padding: 30px 20px 3px 20px;
@@ -808,19 +813,15 @@
       text-align: center;
       color: #002453;
       border: 1px solid #b2bdcb;
-      /* opacity: 0;
-      transition: all 1s cubic-bezier(.165, .84, .44, 1) 0.2s;
-      transform: translateY(100px); */
+      opacity: 0;
+
       animation-name: content3-Btnup;
-      animation-duration: 1000;
+      animation-duration: 1s;
       animation-timing-function: cubic-bezier(.165, .84, .44, 1);
       animation-iteration-count: 1;
+      animation-delay: .6s;
+      animation-fill-mode: forwards;
     }
-
-    /* .content-3 .btn a.active{
-      opacity: 1;
-      transform:translateY(0);
-    } */
 
     @keyframes content3-Btnup {
       0% {
@@ -897,9 +898,6 @@
       color: #0d3153;
       border: 1px solid #e0e0e0;
       cursor: pointer;
-
-
-
     }
 
     /* ------- main end ------- */
@@ -907,6 +905,9 @@
   </style>
 
   <script>
+    AOS.init();
+
+
     function productMenuActive() {
       $(window).scroll(function () {
         var scrollTop2 = $(window).scrollTop();
@@ -918,7 +919,6 @@
         }
       });
     }
-
 
     productMenuActive();
 
