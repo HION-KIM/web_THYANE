@@ -17,50 +17,97 @@
 <body>
   <section class="main__banner swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="banner_img swiper-slide sec1"></div>
-      <div class="banner_img swiper-slide sec2"></div>
-      <div class="banner_img swiper-slide sec3"></div>
+      <div class="swiper-slide slide-1"></div>
+      <div class="swiper-slide slide-2"></div>
+      <div class="swiper-slide slide-3"></div>
     </div>
-    <div class="swiper-bar">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+
     <div class="swiper-btn">
       <div class="imgbox prev"></div>
       <div class="imgbox next"></div>
     </div>
+    <div class="swiper-pagination-box">
+      <div class="swiper-pagination"></div>
+    </div>
+
   </section>
 
   <style>
     /* ------- main_banner start ------- */
-    .main__banner .banner_img {
-      background-image: url(../img/imageye___-_th_01.jpg);
-      background-size: cover;
-      height: 106vh;
+    .main__banner {
+      height: 114vh;
       position: relative;
     }
 
-    .swiper-bar {
+    html>body .main__banner .swiper-slide {
+      background-size: cover;
+      transform: scale(1.5);
+      opacity: 0;
+      transition: all 1s ease;
+    }
+
+    html>body .main__banner .swiper-slide-active {
+      transform: scale(1.0);
+      opacity: 1;
+    }
+
+    .main__banner .slide-1 {
+      background-image: url(../img/imageye___-_th_01.jpg);
+    }
+
+    .main__banner .slide-2 {
+      background-image: url(../img/imageye___-_th_02.jpg);
+    }
+
+    .main__banner .slide-3 {
+      background-image: url(../img/imageye___-_th_03.jpg);
+    }
+
+
+
+    .swiper-pagination-box {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 78px;
+    }
+
+    .swiper-pagination {
+      margin: 0 0;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet {
+      width: 75px !important;
+      height: 2.3px;
+      background-color: rgba(255, 255, 255, 0.5) !important;
+      opacity: 1;
+      position: relative;
+      overflow: hidden;
+      margin: 0 2px !important;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet-active::before {
+      content: "";
+      background-color: rgba(255, 255, 255, 1) !important;
+      width: 0;
+      height: 100%;
+      display: block;
       position: absolute;
       left: 0;
-      bottom: 94px;
-      height: 2px;
-      width: 100%;
-      text-align: center;
-      z-index: 1000;
+      top: 0;
+      animation-name: swiper-pagination;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
     }
 
-    .swiper-bar>div {
-      display: inline-block;
-      height: 100%;
-      width: 79px;
-      background-color: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-    }
+    @keyframes swiper-pagination {
+      0% {
+        width: 0;
+      }
 
-    .swiper-bar>div:first-child {
-      background-color: #fff;
+      100% {
+        width: 100%;
+      }
     }
 
     .swiper-btn {
@@ -83,12 +130,14 @@
       background-image: url(../img/slide-bt01.png);
       left: 0;
       top: 0;
+      cursor: pointer;
     }
 
     .swiper-btn>.next {
       background-image: url(../img/slide-bt02.png);
       right: 0;
       top: 0;
+      cursor: pointer;
     }
 
     /* ------- main_banner end ------- */
@@ -97,10 +146,19 @@
   <script>
     var swiper = new Swiper(".mySwiper", {
       effect: "fade",
+      // fadeEffect: {
+      //   crossFade: true
+      // },
+      speed: 0,
       centeredSlides: true,
+      loop: true,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
       navigation: {
         nextEl: ".next",
