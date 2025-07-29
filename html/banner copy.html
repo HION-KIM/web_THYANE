@@ -5,11 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>banner</title>
+  <!-- 외부링크 -->
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- 내부링크 -->
   <link rel="stylesheet" href="../link.css">
 </head>
 
 <body>
-  <section class="main__banner">
+  <section class="main__banner swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="banner_img swiper-slide sec1"></div>
+      <div class="banner_img swiper-slide sec2"></div>
+      <div class="banner_img swiper-slide sec3"></div>
+    </div>
     <div class="swiper-bar">
       <div></div>
       <div></div>
@@ -23,7 +34,7 @@
 
   <style>
     /* ------- main_banner start ------- */
-    .main__banner {
+    .main__banner .banner_img {
       background-image: url(../img/imageye___-_th_01.jpg);
       background-size: cover;
       height: 106vh;
@@ -37,6 +48,7 @@
       height: 2px;
       width: 100%;
       text-align: center;
+      z-index: 1000;
     }
 
     .swiper-bar>div {
@@ -58,6 +70,7 @@
       right: 80px;
       bottom: 80px;
       background: url(../img/slide-bt03.png) no-repeat center center;
+      z-index: 1000;
     }
 
     .swiper-btn>.imgbox {
@@ -65,18 +78,36 @@
       height: 14px;
       position: absolute;
     }
-    .swiper-btn>.prev{
+
+    .swiper-btn>.prev {
       background-image: url(../img/slide-bt01.png);
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
     }
-    .swiper-btn>.next{
+
+    .swiper-btn>.next {
       background-image: url(../img/slide-bt02.png);
-      right:0;
-      top:0;
+      right: 0;
+      top: 0;
     }
+
     /* ------- main_banner end ------- */
   </style>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "fade",
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+      },
+    });
+  </script>
 </body>
 
 </html>
