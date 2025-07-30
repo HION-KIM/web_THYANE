@@ -121,13 +121,13 @@
     <div class="hambergerbox">
       <div class="HBG-bg HBG-left-bg"></div>
       <div class="HBG-bg HBG-right-bg"></div>
-      <div class="HBG-content">
-        <div class="HBG-close">
-          <div class="HBG-close-btn">
-            <div></div>
-            <div></div>
-          </div>
+      <div class="HBG-close">
+        <div class="HBG-close-btn">
+          <div></div>
+          <div></div>
         </div>
+      </div>
+      <div class="HBG-content">
         <div class="HBG-menu">
           <div class="sec-left">
             <nav class="sec-left-menu-top">
@@ -179,8 +179,9 @@
           <div><img src="../img/imageye___-_ham-icon03.png" alt=""></div>
           <div><img src="../img/imageye___-_ham-icon04.png" alt=""></div>
         </div>
-
       </div>
+
+
     </div>
   </div>
 
@@ -489,87 +490,181 @@
       top: 0;
       left: 0;
       z-index: 2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'NotoSansKR' 'CrimsonText' sans-serif;
+      visibility: hidden;
+      transition: all .7s cubic-bezier(.34, .7, .35, .7);
+    }
+
+    .hambergerbox.active {
+      visibility: visible;
     }
 
     .hambergerbox .HBG-bg {
       position: absolute;
       background-color: #343f43;
       width: 50%;
-      height: 100%;
       left: 0;
       top: 0;
+      right: 0;
+      bottom: 100%;
       z-index: -1000;
     }
+
+    .hambergerbox.closed {
+      top: -100%;
+    }
+
+
 
     .hambergerbox .HBG-right-bg {
       left: 50%;
     }
 
-    .hambergerbox .HBG-content {
-      padding-top: 88px;
+    .hambergerbox.active .HBG-bg {
+      animation-name: HBG-bg-move;
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(.34, .7, .35, .7);
     }
 
-    .hambergerbox .HBG-content .HBG-close {
-      padding: 10px;
-      width:1880px;
+    .hambergerbox.active .HBG-left-bg {
+      animation-delay: 0.1s;
+    }
+
+    @keyframes HBG-bg-move {
+      0% {
+        bottom: 100%
+      }
+
+      100% {
+        bottom: 0;
+      }
+    }
+
+    .hambergerbox .HBG-close {
+      position: absolute;
+      top: 95px;
+      left: 0;
+      padding: 0 30px;
+      width: 1880px;
       margin: 0 auto;
       box-sizing: border-box;
+      z-index: -20;
     }
 
-    .hambergerbox .HBG-content .HBG-close-btn {
+    .hambergerbox .HBG-close .HBG-close-btn {
       width: 30px;
       height: 50px;
       cursor: pointer;
       position: relative;
     }
 
-    .hambergerbox .HBG-content .HBG-close-btn div {
+    .hambergerbox .HBG-close .HBG-close-btn div {
       position: absolute;
-      left: 50%;
+      left: 0;
       top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateY(-50%);
       transform: rotate(45deg);
       background-color: #fff;
       width: 100%;
       height: 2px;
     }
 
-    .hambergerbox .HBG-content .HBG-close-btn div:nth-child(2) {
+    .hambergerbox .HBG-close .HBG-close-btn div:nth-child(2) {
       transform: rotate(-45deg);
+    }
+
+    .hambergerbox .HBG-content {
+      padding: 50px 30px;
+      box-sizing: border-box;
+      width: 1100px;
     }
 
     .hambergerbox .HBG-content hr {
       margin: 20px 0 30px 0;
-      border:1px solid #fff;
+      border: 1px solid #fff;
       opacity: .1;
     }
 
-    .hambergerbox .HBG-content a {
-      display: inline-block;
-      margin: 5px 0;
+    .hambergerbox .HBG-content .sec-right hr {
+      margin: 40px 0;
     }
 
     .hambergerbox .HBG-content .HBG-menu {
-      width: 1100px;
-      margin: 0 auto;
-      display: flex;
+      width: 100%;
       color: #fff;
-      gap:100px;
+      display: flex;
     }
 
-    .hambergerbox .HBG-content .HBG-menu div {
-      width: 50%;
+    .hambergerbox .HBG-content .HBG-menu ul li a {
+      opacity: .6;
+      display: inline-block;
+      margin: 5px 0;
+      padding: 0;
+      position: relative;
+      transition: all .6s cubic-bezier(0.7, 0, 0.1, 1);
+    }
+
+    .hambergerbox .HBG-content .HBG-menu ul li a:hover {
+      opacity: 1;
+    }
+
+    .hambergerbox .HBG-content .HBG-menu ul li a::after {
+      content: "";
+      display: blcok;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: all .6s cubic-bezier(0.7, 0, 0.1, 1);
+    }
+
+    .hambergerbox .HBG-content .HBG-menu .sec-right-menu-bottom ul li a::after {
+      height: 0;
+    }
+
+    .hambergerbox .HBG-content .HBG-menu ul>li>a:hover::after,
+    .hambergerbox .HBG-content .HBG-menu ul>li>ul>li>a:hover::after {
+      width: 100%;
+    }
+
+    .hambergerbox .HBG-content .HBG-menu .sec-left {
+      width: 600px;
+      display: inline-block;
+      padding-right: 100px;
+      box-sizing: border-box;
+      vertical-align: top;
+      margin-top: 20px;
+    }
+
+    .hambergerbox .HBG-content .HBG-menu .sec-right {
+      width: 440px;
+      margin-top: 130px;
+      display: inline-block;
     }
 
     .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-top ul>li {
       font-size: 58px;
       font-weight: 700;
-      line-height: 1.7;
+      line-height: 1.4;
       letter-spacing: 2px;
     }
 
+    .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-top ul>li>a {
+      opacity: 1;
+    }
+
+    .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-bottom>ul>li {
+      margin-bottom: 15px;
+    }
+
     .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-bottom>ul>li>a {
-      opacity: .6;
       font-size: 26px;
       font-weight: 700;
       letter-spacing: -0.5px;
@@ -582,28 +677,33 @@
       font-size: 22px;
       line-height: 1.6;
       font-weight: 400;
-      opacity: .6;
     }
-    .hambergerbox .HBG-content .HBG-menu .sec-right{
-      padding-top:120px;
-    }
-    .hambergerbox .HBG-content .HBG-menu .sec-right .sec-right-menu-top ul>li {
+
+    .hambergerbox .HBG-content .HBG-menu .sec-right .sec-right-menu-top ul>li>a {
       font-size: 50px;
       font-weight: 600;
-      line-height: 1.6;
+      line-height: 1.5;
       letter-spacing: 2px;
+      opacity: 1;
     }
+
     .hambergerbox .HBG-content .HBG-menu .sec-right .sec-right-menu-bottom ul>li {
       font-size: 22px;
       line-height: 1.6;
       font-weight: 500;
-      opacity: .7;
     }
-    .hambergerbox .HBG-icon{
-      width:1100px;
+
+    .hambergerbox .HBG-icon {
+      width: 1100px;
       margin: 0 auto;
-      display:flex;
-      gap:45px;
+      display: flex;
+      gap: 45px;
+      margin: 30px 0;
+      align-items: center;
+    }
+
+    .hambergerbox .HBG-icon div {
+      display: inline-block;
     }
 
     /* ------- hamberger-Box end ------- */
@@ -633,8 +733,31 @@
       })
     }
 
+    function hambergerActive() {
+      // if ($('.topbar__inner-2__hamberger').hasClass('active')) {
+      //   $('.hambergerbox').removeClass('active closed');
+      // }
+      $('.topbar__inner-2__hamberger').click(function () {
+        $('.hambergerbox').addClass('active');
+      });
+
+      $('.HBG-close-btn').click(function () {
+        $('.hambergerbox').addClass('closed');
+
+        setTimeout(function () {
+          $('.hambergerbox').removeClass('closed');
+          $('.hambergerbox').removeClass('active');
+        }, 2400);
+      });
+
+
+    }
+
+
+
     SearchBtnActive();
     TopbarHide();
+    hambergerActive()
 
   </script>
 
