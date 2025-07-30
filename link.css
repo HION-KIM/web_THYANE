@@ -92,6 +92,9 @@ body img {
 .relative {
     position: relative;
 }
+.hidden{
+    overflow: hidden;
+}
 
 /* 공통 커스텀 */
 
