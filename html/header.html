@@ -180,10 +180,8 @@
             <li><a href="#"><img src="../img/imageye___-_ham-icon03.png" alt=""></a></li>
             <li><a href="#"><img src="../img/imageye___-_ham-icon04.png" alt=""></a></li>
           </ul>
+        </nav>
       </div>
-      </nav>
-
-
     </div>
   </div>
 
@@ -279,10 +277,6 @@
     }
 
     /* ------- menu setting end -------  */
-
-    .topbar__inner-1__lang-box {
-      width: 90px;
-    }
 
     /* ------- logo box ------- */
     .topbar__inner-1__logo-box {
@@ -588,7 +582,15 @@
       margin: 20px 0 30px 0;
       border: 1px solid #fff;
       opacity: .1;
+      width: 0;
+
     }
+
+    .hambergerbox.active .HBG-content hr {
+      width: 500px;
+      transition: width 0.6s 0.7s ease;
+    }
+
 
     .hambergerbox .HBG-content .sec-right hr {
       margin: 40px 0;
@@ -615,7 +617,7 @@
 
     .hambergerbox .HBG-content a::after {
       content: "";
-      display: blcok;
+      display: block;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -659,7 +661,8 @@
     .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-top ul>li>a {
       opacity: 1;
     }
-    .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-top ul>li:nth-child(2)>a{
+
+    .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-top ul>li:nth-child(2)>a {
       cursor: unset;
     }
 
@@ -705,7 +708,7 @@
       align-items: center;
     }
 
-    .hambergerbox .HBG-icon ul li a{
+    .hambergerbox .HBG-icon ul li a {
       display: inline-block;
       position: relative;
       padding-bottom: 30px;
@@ -715,24 +718,25 @@
       bottom: 10px;
     }
 
-    .hambergerbox ul>li{
+    .hambergerbox ul>li {
       overflow: hidden;
     }
 
-    .hambergerbox.active ul>li>a{
+    .hambergerbox.active ul>li>a {
       transform: translateY(300px);
-      animation-name:hambergerTextani;
+      animation-name: hambergerTextani;
       animation-duration: 1s;
       animation-fill-mode: forwards;
       animation-delay: .5s;
       animation-timing-function: ease;
     }
 
-    @keyframes hambergerTextani{
-      0%{
+    @keyframes hambergerTextani {
+      0% {
         transform: translateY(300px);
       }
-      100%{
+
+      100% {
         transform: translateY(0);
       }
     }
@@ -754,13 +758,12 @@
         if (scrollTop >= 400) {
           $('.topbar__inner-1').addClass('hide');
           $('.topbar__inner-2').addClass('active');
-          $()
         }
         else if (scrollTop == 0) {
           $('.topbar__inner-1').removeClass('hide');
           $('.topbar__inner-2').removeClass('active');
         }
-      })
+      });
     }
 
     function hambergerActive() {
@@ -775,10 +778,10 @@
         setTimeout(function () {
           $('.hambergerbox').removeClass('active');
           $('.hambergerbox').removeClass('closed');
-        }, 1400);
+        }, 600);
       });
     }
-    
+
 
 
     SearchBtnActive();

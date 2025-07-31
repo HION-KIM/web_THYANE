@@ -10,6 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- 내부링크 -->
     <link rel="stylesheet" href="../link.css">
@@ -18,7 +21,7 @@
 
 <body>
     <div>
-        <header class="topbar fixed w-100 blockborder-R">
+        <header class="topbar fixed w-100 block">
             <div class="topbar__inner-1 con-max-width center flex">
                 <div class="topbar__inner-1__lang-box flex">
                     <a href="#">kr</a>
@@ -56,14 +59,14 @@
                     </ul>
                 </div>
             </div>
-            <div class="topbar__inner-2 con-max-width center flex">
+            <div class="topbar__inner-2 con-max-width center">
                 <div class="topbar__inner-2__hamberger">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <div class="menu-box topbar__inner-2__menu-box1 grow h-100">
-                    <ul class="flex box-center">
+                <div class="menu-box topbar__inner-2__menu-box1 h-100 center">
+                    <ul class="flex box-center inline-block">
                         <li>
                             <a href="#"><span>Home</span></a>
                         </li>
@@ -73,16 +76,20 @@
                         <li>
                             <a href="#"><span>Shop</span></a>
                             <ul>
-                                <li><a href="#">상품유형별</a></li>
-                                <li><a href="#">전체</a></li>
-                                <li><a href="#">클렌징워터</a></li>
-                                <li><a href="#">토너</a></li>
-                                <li><a href="#">에센스</a></li>
-                                <li><a href="#">수분크림</a></li>
-                                <li><a href="#">선로션</a></li>
-                                <li><a href="#">코튼패드</a></li>
-                                <li><a href="#">액세서리</a></li>
-                                <li><a href="#">세트상품</a></li>
+                                <li><a href="#">상품유형별</a>
+                                    <ul>
+                                        <li><a href="#">전체</a></li>
+                                        <li><a href="#">클렌징워터</a></li>
+                                        <li><a href="#">토너</a></li>
+                                        <li><a href="#">에센스</a></li>
+                                        <li><a href="#">수분크림</a></li>
+                                        <li><a href="#">선로션</a></li>
+                                        <li><a href="#">코튼패드</a></li>
+                                        <li><a href="#">액세서리</a></li>
+                                        <li><a href="#">세트상품</a></li>
+                                    </ul>
+                                </li>
+
                             </ul>
                         </li>
                         <li>
@@ -111,181 +118,259 @@
                         </li>
                     </ul>
                 </div>
-                <div class="topbar__inner-2__search-box">
-                    <img src="../img/sear-icon.png" alt="" />
+                <div class="topbar__inner-2__search-box flex box-center h-100">
+                    <div><input class="search-input" type="text"></div>
+                    <div class="search-btn search-icon-w"><img src="../img/sear-icon.png" alt="" /></div>
+                    <div class="search-btn search-icon-b"><img src="../img/imageye___-_sear-icon-b.png" alt="" /></div>
                 </div>
             </div>
         </header>
-        <main>
-    </div>
-    <section class="main__banner">
-        <div class="swiper-bar">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="hambergerbox">
+            <div class="HBG-bg HBG-left-bg"></div>
+            <div class="HBG-bg HBG-right-bg"></div>
+            <div class="HBG-close">
+                <div class="HBG-close-btn">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="HBG-content">
+                <div class="HBG-menu">
+                    <div class="sec-left">
+                        <nav class="sec-left-menu-top">
+                            <ul>
+                                <li><a href="#"><span>Brandstory</span></a></li>
+                                <li><a><span>Shop</span></a></li>
+                            </ul>
+                        </nav>
+                        <hr>
+                        <nav class="sec-left-menu-bottom">
+                            <ul>
+                                <li><a href="#"><span>상품유형별</span></a>
+                                    <ul>
+                                        <li><a href="#"><span>전체</span></a></li>
+                                        <li><a href="#"><span>클렌징워터</span></a></li>
+                                        <li><a href="#"><span>토너</span></a></li>
+                                        <li><a href="#"><span>에센스</span></a></li>
+                                        <li><a href="#"><span>수분크림</span></a></li>
+                                        <li><a href="#"><span>선로션</span></a></li>
+                                        <li><a href="#"><span>코튼패드</span></a></li>
+                                        <li><a href="#"><span>액세서리</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span>세트상품</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="sec-right">
+                        <nav class="sec-right-menu-top">
+                            <ul>
+                                <li><a href="#"><span>Login</span></a></li>
+                                <li><a href="#"><span>Join</span></a></li>
+                                <li><a href="#"><span>Mypage</span></a></li>
+                            </ul>
+                        </nav>
+                        <hr>
+                        <nav class="sec-right-menu-bottom">
+                            <ul>
+                                <li><a href=" #"><span>Membership</span></a></li>
+                                <li><a href="#"><span>C/S Center</span></a></li>
+                                <li><a href="#"><span>Review</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <nav class="HBG-icon">
+                    <ul>
+                        <li><a href="#"><img src="../img/imageye___-_ham-icon01.png" alt=""></a></li>
+                        <li><a href="#"><img src="../img/imageye___-_ham-icon02.png" alt=""></a></li>
+                        <li><a href="#"><img src="../img/imageye___-_ham-icon03.png" alt=""></a></li>
+                        <li><a href="#"><img src="../img/imageye___-_ham-icon04.png" alt=""></a></li>
+                    </ul>
+            </div>
+            </nav>
+
+
         </div>
+    </div>
+
+    <section class="main__banner swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-1"><img src="../img/imageye___-_th_01.jpg" alt=""></div>
+            <div class="swiper-slide slide-2"><img src="../img/imageye___-_th_02.jpg" alt=""></div>
+            <div class="swiper-slide slide-3"><img src="../img/imageye___-_th_03.jpg" alt=""></div>
+        </div>
+
         <div class="swiper-btn">
             <div class="imgbox prev"></div>
             <div class="imgbox next"></div>
         </div>
+        <div class="swiper-pagination-box">
+            <div class="swiper-pagination"></div>
+        </div>
+
     </section>
-    <div class="con">
-        <section class="content content-1 center">
-            <div class="title">
-                <img src="../img/imageye___-_plin-ic.png" alt="">
-                <br>
-                <span>Product</span>
-            </div>
-            <div class="products product1 relative flex">
-                <div class="bg-b"></div>
-                <div class="img-box">
-                    <a href="#">
-                        <img src="../img/imageye___-_1527038517102i0.png" alt="">
-                    </a>
+
+    <main>
+        <div class="con">
+            <section class="content content-1 center">
+                <div class="title">
+                    <img src="../img/imageye___-_plin-ic.png" alt="">
+                    <br>
+                    <span>Product</span>
                 </div>
-                <div class="text-boxs">
-                    <div class="text-box1">
-                        <span>
-                            Time-crystallized
-                        </span>
-                        <h3>Refresh turn over toner</h3>
-                        <span>타임 크리스탈라이즈드 리플레시 턴 오버 토너</span>
-                    </div>
-                    <div class="text-box2">
-                        <a>
-                            민감한 피부의 각질제거와 피부결 정돈에 효과적이고
-                            <br>
-                            피부에 보습을 주며 편백나무 잎 추출물과 갈락토미세스
-                            <br>
-                            발효 여과물이 함유된 토너입니다.
+                <div class="products product1 relative flex">
+                    <div class="bg-b"></div>
+                    <div class="img-box">
+                        <a href="#">
+                            <img src="../img/imageye___-_1527038517102i0.png" alt="">
                         </a>
                     </div>
-                    <div class="text-box3">
-                        <span>￦ 32,000</span>
-                    </div>
-                    <div class="Btn-box">
-                        <a href="#"><img src="../img/imageye___-_bag-icon.png" alt=""></a>
-                        <a href="#"><img src="../img/imageye___-_card-icon.png" alt=""><span>Buy Now</span></a>
+                    <div class="text-boxs">
+                        <div class="text-box1">
+                            <span>
+                                Time-crystallized
+                            </span>
+                            <h3>Refresh turn over toner</h3>
+                            <span>타임 크리스탈라이즈드 리플레시 턴 오버 토너</span>
+                        </div>
+                        <div class="text-box2">
+                            <a>
+                                민감한 피부의 각질제거와 피부결 정돈에 효과적이고
+                                <br>
+                                피부에 보습을 주며 편백나무 잎 추출물과 갈락토미세스
+                                <br>
+                                발효 여과물이 함유된 토너입니다.
+                            </a>
+                        </div>
+                        <div class="text-box3">
+                            <span>￦ 32,000</span>
+                        </div>
+                        <div class="Btn-box">
+                            <a href="#"><img src="../img/imageye___-_bag-icon.png" alt=""></a>
+                            <a href="#"><img src="../img/imageye___-_card-icon.png" alt=""><span>Buy Now</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="products product2 relative flex">
-                <div class="bg-b"></div>
-                <div class="text-boxs">
-                    <div class="text-box1">
-                        <span>
-                            Time-crystallized
-                        </span>
-                        <h3>Essence</h3>
-                        <span>타임 크리스탈라이즈드 에센스</span>
+                <div class="products product2 relative flex">
+                    <div class="bg-b"></div>
+                    <div class="text-boxs">
+                        <div class="text-box1">
+                            <span>
+                                Time-crystallized
+                            </span>
+                            <h3>Essence</h3>
+                            <span>타임 크리스탈라이즈드 에센스</span>
+                        </div>
+                        <div class="text-box2">
+                            <a>
+                                지쳐있는 피부에 산뜻한 느낌을 주고 촉촉한 수분감 제공과
+                                <br>
+                                피부의 탄력 증강을 도와주며 6가지의 크고 작은 히알루론산이
+                                <br>
+                                함유된 에센스입니다.
+                            </a>
+                        </div>
+                        <div class="text-box3">
+                            <span>￦ 40,000</span>
+                        </div>
+                        <div class="Btn-box">
+                            <a href="#"><img src="../img/imageye___-_bag-icon.png" alt=""></a>
+                            <a href="#"><img src="../img/imageye___-_card-icon.png" alt=""><span>Buy Now</span></a>
+                        </div>
                     </div>
-                    <div class="text-box2">
-                        <a>
-                            지쳐있는 피부에 산뜻한 느낌을 주고 촉촉한 수분감 제공과
-                            <br>
-                            피부의 탄력 증강을 도와주며 6가지의 크고 작은 히알루론산이
-                            <br>
-                            함유된 에센스입니다.
+                    <div class="img-box">
+                        <a href="#">
+                            <img src="../img/imageye___-_1527038603320i0.png" alt="">
                         </a>
                     </div>
-                    <div class="text-box3">
-                        <span>￦ 40,000</span>
-                    </div>
-                    <div class="Btn-box">
-                        <a href="#"><img src="../img/imageye___-_bag-icon.png" alt=""></a>
-                        <a href="#"><img src="../img/imageye___-_card-icon.png" alt=""><span>Buy Now</span></a>
-                    </div>
                 </div>
-                <div class="img-box">
-                    <a href="#">
-                        <img src="../img/imageye___-_1527038603320i0.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="products product3 relative flex">
-                <div class="bg-b"></div>
-                <div class="img-box">
-                    <a href="#">
-                        <img src="../img/imageye___-_1527038620290i0.png" alt="">
-                    </a>
-                </div>
-                <div class="text-boxs">
-                    <div class="text-box1">
-                        <span>
-                            Time-crystallized
-                        </span>
-                        <h3>Daily defence sun lotion</h3>
-                        <span>타임 크리스탈라이즈드 데일리 디펜스 선로션</span>
-                    </div>
-                    <div class="text-box2">
-                        <a>
-                            차단제의 적절한 배합을 통한 자외선 차단 효과와 식물성 복합물질인
-                            <br>
-                            BSASM의 함유로 자외선으로부터 자극받은 피부를 진정시켜주며
-                            <br>
-                            톤업 효과를 주는 데일리 선로션입니다.
+                <div class="products product3 relative flex">
+                    <div class="bg-b"></div>
+                    <div class="img-box">
+                        <a href="#">
+                            <img src="../img/imageye___-_1527038620290i0.png" alt="">
                         </a>
                     </div>
-                    <div class="text-box3">
-                        <span>￦ 29,000</span>
-                    </div>
-                    <div class="Btn-box">
-                        <a href="#"><img src="../img/imageye___-_bag-icon.png" alt=""></a>
-                        <a href="#"><img src="../img/imageye___-_card-icon.png" alt=""><span>Sold Out</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-box center">
-                <a href="#">
-                    All Products
-                </a>
-            </div>
-        </section>
-        <section class="content content-2 center relative">
-            <div class="history">
-                <h3>Thyane history</h3>
-                <div class="instashow">
-                    <div class="loader">
+                    <div class="text-boxs">
+                        <div class="text-box1">
+                            <span>
+                                Time-crystallized
+                            </span>
+                            <h3>Daily defence sun lotion</h3>
+                            <span>타임 크리스탈라이즈드 데일리 디펜스 선로션</span>
+                        </div>
+                        <div class="text-box2">
+                            <a>
+                                차단제의 적절한 배합을 통한 자외선 차단 효과와 식물성 복합물질인
+                                <br>
+                                BSASM의 함유로 자외선으로부터 자극받은 피부를 진정시켜주며
+                                <br>
+                                톤업 효과를 주는 데일리 선로션입니다.
+                            </a>
+                        </div>
+                        <div class="text-box3">
+                            <span>￦ 29,000</span>
+                        </div>
+                        <div class="Btn-box">
+                            <a href="#"><img src="../img/imageye___-_bag-icon.png" alt=""></a>
+                            <a href="#"><img src="../img/imageye___-_card-icon.png" alt=""><span>Sold Out</span></a>
+                        </div>
                     </div>
                 </div>
                 <div class="btn-box center">
                     <a href="#">
-                        Visit official Instagram
+                        All Products
                     </a>
                 </div>
-        </section>
-        <section class="content content-3">
-            <div>
-                <div Class="title">
-                    <p>Please lend us your time for a moment.</p>
+            </section>
+            <section class="content content-2 center relative">
+                <div class="history">
+                    <h3>Thyane history</h3>
+                    <div class="instashow">
+                        <div class="loader">
+                        </div>
+                    </div>
+                    <div class="btn-box center">
+                        <a href="#">
+                            Visit official Instagram
+                        </a>
+                    </div>
+            </section>
+            <section class="content content-3">
+                <div>
+                    <div Class="title">
+                        <p>Please lend us your time for a moment.</p>
+                    </div>
+                    <div class="text">
+                        <p>
+                            The place where you get invited, THYANE, is a store in the forest to provide you the shade
+                            of time.
+                            <br>
+                            Through this moment, you will face your real self living in a time of THYANE.
+                        </p>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="btn" data-aos data-aos-once="true"><a href="#">Storytelling : THYANE</a></div>
+                    <div class=" img-box"><img src="../img/imageye___-_mois-img23.png" alt=""></div>
                 </div>
-                <div class="text">
-                    <p>
-                        The place where you get invited, THYANE, is a store in the forest to provide you the shade of
-                        time.
-                        <br>
-                        Through this moment, you will face your real self living in a time of THYANE.
-                    </p>
-                </div>
-                <br>
-                <br>
-                <div class="btn"><a href="#">Storytelling : THYANE</a></div>
-                <div class="img-box"><img src="../img/imageye___-_mois-img23.png" alt=""></div>
-            </div>
-        </section>
+            </section>
 
-        <div class="product-menu">
-            <div class="title"><span>최근 본 상품</span></div>
-            <div class="main"></div>
-            <div class="arr-btn">
-                <img src="../img/wing_bt_prew.gif" alt="">
-                <img src="../img/wing_bt_next.gif" alt="">
+            <div class="product-menu">
+                <div class="title"><span>최근 본 상품</span></div>
+                <div class="main"></div>
+                <div class="arr-btn">
+                    <img src="../img/wing_bt_prew.gif" alt="">
+                    <img src="../img/wing_bt_next.gif" alt="">
+                </div>
+                <div class="closed"><span>닫기</span></div>
             </div>
-            <div class="closed"><span>닫기</span></div>
+
         </div>
-
-    </div>
     </main>
+
+
     <footer>
         <div>
             <section class="sec-1">
