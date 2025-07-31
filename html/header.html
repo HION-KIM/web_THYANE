@@ -133,7 +133,7 @@
             <nav class="sec-left-menu-top">
               <ul>
                 <li><a href="#"><span>Brandstory</span></a></li>
-                <li><span>Shop</span></li>
+                <li><a><span>Shop</span></a></li>
               </ul>
             </nav>
             <hr>
@@ -173,13 +173,15 @@
             </nav>
           </div>
         </div>
-        <div class="HBG-icon">
-          <div><img src="../img/imageye___-_ham-icon01.png" alt=""></div>
-          <div><img src="../img/imageye___-_ham-icon02.png" alt=""></div>
-          <div><img src="../img/imageye___-_ham-icon03.png" alt=""></div>
-          <div><img src="../img/imageye___-_ham-icon04.png" alt=""></div>
-        </div>
+        <nav class="HBG-icon">
+          <ul>
+            <li><a href="#"><img src="../img/imageye___-_ham-icon01.png" alt=""></a></li>
+            <li><a href="#"><img src="../img/imageye___-_ham-icon02.png" alt=""></a></li>
+            <li><a href="#"><img src="../img/imageye___-_ham-icon03.png" alt=""></a></li>
+            <li><a href="#"><img src="../img/imageye___-_ham-icon04.png" alt=""></a></li>
+          </ul>
       </div>
+      </nav>
 
 
     </div>
@@ -495,11 +497,16 @@
       align-items: center;
       font-family: 'NotoSansKR' 'CrimsonText' sans-serif;
       visibility: hidden;
-      transition: all .7s cubic-bezier(.34, .7, .35, .7);
+
     }
 
     .hambergerbox.active {
       visibility: visible;
+    }
+
+    .hambergerbox.closed {
+      top: -100%;
+      transition: all .7s cubic-bezier(.34, .7, .35, .7);
     }
 
     .hambergerbox .HBG-bg {
@@ -512,12 +519,6 @@
       bottom: 100%;
       z-index: -1000;
     }
-
-    .hambergerbox.closed {
-      top: -100%;
-    }
-
-
 
     .hambergerbox .HBG-right-bg {
       left: 50%;
@@ -605,14 +606,14 @@
       margin: 5px 0;
       padding: 0;
       position: relative;
-      transition: all .6s cubic-bezier(0.7, 0, 0.1, 1);
+      transition: opacity .6s cubic-bezier(0.7, 0, 0.1, 1);
     }
 
     .hambergerbox .HBG-content .HBG-menu ul li a:hover {
       opacity: 1;
     }
 
-    .hambergerbox .HBG-content .HBG-menu ul li a::after {
+    .hambergerbox .HBG-content a::after {
       content: "";
       display: blcok;
       position: absolute;
@@ -622,15 +623,14 @@
       width: 0;
       height: 2px;
       background-color: #fff;
-      transition: all .6s cubic-bezier(0.7, 0, 0.1, 1);
+      transition: width .6s cubic-bezier(0.7, 0, 0.1, 1);
     }
 
     .hambergerbox .HBG-content .HBG-menu .sec-right-menu-bottom ul li a::after {
       height: 0;
     }
 
-    .hambergerbox .HBG-content .HBG-menu ul>li>a:hover::after,
-    .hambergerbox .HBG-content .HBG-menu ul>li>ul>li>a:hover::after {
+    .hambergerbox .HBG-content a:hover::after {
       width: 100%;
     }
 
@@ -658,6 +658,9 @@
 
     .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-top ul>li>a {
       opacity: 1;
+    }
+    .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-top ul>li:nth-child(2)>a{
+      cursor: unset;
     }
 
     .hambergerbox .HBG-content .HBG-menu .sec-left .sec-left-menu-bottom>ul>li {
@@ -693,7 +696,7 @@
       font-weight: 500;
     }
 
-    .hambergerbox .HBG-icon {
+    .hambergerbox .HBG-icon ul {
       width: 1100px;
       margin: 0 auto;
       display: flex;
@@ -702,8 +705,36 @@
       align-items: center;
     }
 
-    .hambergerbox .HBG-icon div {
+    .hambergerbox .HBG-icon ul li a{
       display: inline-block;
+      position: relative;
+      padding-bottom: 30px;
+    }
+
+    .hambergerbox .HBG-icon ul li a:after {
+      bottom: 10px;
+    }
+
+    .hambergerbox ul>li{
+      overflow: hidden;
+    }
+
+    .hambergerbox.active ul>li>a{
+      transform: translateY(300px);
+      animation-name:hambergerTextani;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: .5s;
+      animation-timing-function: ease;
+    }
+
+    @keyframes hambergerTextani{
+      0%{
+        transform: translateY(300px);
+      }
+      100%{
+        transform: translateY(0);
+      }
     }
 
     /* ------- hamberger-Box end ------- */
@@ -713,7 +744,6 @@
     function SearchBtnActive() {
       $(".search-btn").click(function () {
         $(".search-input").addClass('active').focus();
-        console.log("1");
       });
     }
 
@@ -734,30 +764,26 @@
     }
 
     function hambergerActive() {
-      // if ($('.topbar__inner-2__hamberger').hasClass('active')) {
-      //   $('.hambergerbox').removeClass('active closed');
-      // }
       $('.topbar__inner-2__hamberger').click(function () {
         $('.hambergerbox').addClass('active');
+
       });
 
       $('.HBG-close-btn').click(function () {
         $('.hambergerbox').addClass('closed');
 
         setTimeout(function () {
-          $('.hambergerbox').removeClass('closed');
           $('.hambergerbox').removeClass('active');
-        }, 2400);
+          $('.hambergerbox').removeClass('closed');
+        }, 1400);
       });
-
-
     }
-
+    
 
 
     SearchBtnActive();
     TopbarHide();
-    hambergerActive()
+    hambergerActive();
 
   </script>
 
