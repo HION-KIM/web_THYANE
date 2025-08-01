@@ -19,7 +19,7 @@
         <div class="topbar__inner-1__lang-box flex">
           <a href="#">kr</a>
         </div>
-        <div class="menu-box topbar__inner-1__menu-box-1 ">
+        <nav class="menu-box topbar__inner-1__menu-box-1 ">
           <ul>
             <li>
               <a href="#"><span>Notice</span></a>
@@ -31,11 +31,11 @@
               <a href="#"><span>Membership</span></a>
             </li>
           </ul>
-        </div>
+        </nav>
         <div class="topbar__inner-1__logo-box flex grow box-center">
           <img src="../img/imageye___-_logo-w.png" alt="" />
         </div>
-        <div class="menu-box topbar__inner-1__menu-box-2">
+        <nav class="menu-box topbar__inner-1__menu-box-2">
           <ul>
             <li>
               <a href="#"><span>Login</span></a>
@@ -50,7 +50,7 @@
               <a href="#"><span>Cart</span></a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div class="topbar__inner-2 con-max-width center">
         <div class="topbar__inner-2__hamberger">
@@ -58,7 +58,7 @@
           <div></div>
           <div></div>
         </div>
-        <div class="menu-box topbar__inner-2__menu-box1 h-100 center">
+        <nav class="menu-box topbar__inner-2__menu-box1 h-100 center">
           <ul class="flex box-center inline-block">
             <li>
               <a href="#"><span>Home</span></a>
@@ -110,7 +110,7 @@
               </ul>
             </li>
           </ul>
-        </div>
+        </nav>
         <div class="topbar__inner-2__search-box flex box-center h-100">
           <div><input class="search-input" type="text"></div>
           <div class="search-btn search-icon-w"><img src="../img/sear-icon.png" alt="" /></div>
@@ -118,6 +118,7 @@
         </div>
       </div>
     </header>
+
     <div class="hambergerbox">
       <div class="HBG-bg HBG-left-bg"></div>
       <div class="HBG-bg HBG-right-bg"></div>
@@ -198,6 +199,7 @@
       height: 82px;
       color: #fff;
       z-index: 1000;
+      min-width: 1340px;
     }
 
     .topbar a,
@@ -296,6 +298,7 @@
       height: 78px;
       position: relative;
       transition: all .5s ease;
+      text-align: center;
     }
 
     .topbar__inner-2.active {
@@ -390,6 +393,7 @@
       background-color: #fff;
       transition: all .5s ease;
       box-shadow: inset 0 0 0 1px #bfbfbf;
+      overflow: hidden;
     }
 
     .topbar__inner-2__menu-box1>ul>li:hover>ul {
@@ -413,6 +417,11 @@
       font-weight: 400;
       line-height: 28px;
       color: #999;
+      transition: color 0.5s ease;
+    }
+
+    .topbar__inner-2__menu-box1>ul>li:nth-child(3)>ul>li>ul>li:hover {
+      color: #0d3153;
     }
 
     .topbar__inner-2__menu-box1>ul>li:nth-child(3)>ul>li>ul>li:last-child {
@@ -548,6 +557,12 @@
       margin: 0 auto;
       box-sizing: border-box;
       z-index: -20;
+      opacity: 0;
+    }
+
+    .hambergerbox.active .HBG-close {
+      opacity: 1;
+      transition: opacity 0.4s 0.5s ease;
     }
 
     .hambergerbox .HBG-close .HBG-close-btn {
@@ -570,6 +585,25 @@
 
     .hambergerbox .HBG-close .HBG-close-btn div:nth-child(2) {
       transform: rotate(-45deg);
+    }
+
+    .hambergerbox .HBG-close .HBG-close-btn div::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: #bababa;
+      transition: width 1s cubic-bezier(.165, .84, .44, 1);
+    }
+
+    .hambergerbox .HBG-close .HBG-close-btn div:nth-child(1):after {
+      transition: width 1s 0.2s cubic-bezier(.165, .84, .44, 1);
+    }
+
+    .hambergerbox .HBG-close .HBG-close-btn:hover div::after {
+      width: 100%;
     }
 
     .hambergerbox .HBG-content {
